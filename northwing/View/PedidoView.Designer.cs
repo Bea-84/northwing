@@ -59,6 +59,7 @@
             this.lbtitulo.AutoSize = true;
             this.lbtitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbtitulo.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbtitulo.Location = new System.Drawing.Point(46, 51);
             this.lbtitulo.Name = "lbtitulo";
             this.lbtitulo.Size = new System.Drawing.Size(162, 35);
@@ -68,73 +69,96 @@
             // lbindicacion
             // 
             this.lbindicacion.AutoSize = true;
+            this.lbindicacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbindicacion.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbindicacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbindicacion.Location = new System.Drawing.Point(41, 119);
             this.lbindicacion.Name = "lbindicacion";
-            this.lbindicacion.Size = new System.Drawing.Size(176, 26);
+            this.lbindicacion.Size = new System.Drawing.Size(178, 28);
             this.lbindicacion.TabIndex = 1;
             this.lbindicacion.Text = "Indique su OrderID";
             // 
             // lborderID
             // 
             this.lborderID.AutoSize = true;
+            this.lborderID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lborderID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lborderID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lborderID.Location = new System.Drawing.Point(43, 178);
             this.lborderID.Name = "lborderID";
-            this.lborderID.Size = new System.Drawing.Size(47, 13);
+            this.lborderID.Size = new System.Drawing.Size(69, 21);
             this.lborderID.TabIndex = 2;
             this.lborderID.Text = "Order ID";
             // 
             // lbCustomerID
             // 
             this.lbCustomerID.AutoSize = true;
+            this.lbCustomerID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbCustomerID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCustomerID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbCustomerID.Location = new System.Drawing.Point(43, 220);
             this.lbCustomerID.Name = "lbCustomerID";
-            this.lbCustomerID.Size = new System.Drawing.Size(65, 13);
+            this.lbCustomerID.Size = new System.Drawing.Size(94, 21);
             this.lbCustomerID.TabIndex = 3;
             this.lbCustomerID.Text = "Customer ID";
             // 
             // lbEmployeID
             // 
             this.lbEmployeID.AutoSize = true;
+            this.lbEmployeID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbEmployeID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmployeID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbEmployeID.Location = new System.Drawing.Point(43, 259);
             this.lbEmployeID.Name = "lbEmployeID";
-            this.lbEmployeID.Size = new System.Drawing.Size(61, 13);
+            this.lbEmployeID.Size = new System.Drawing.Size(88, 21);
             this.lbEmployeID.TabIndex = 4;
             this.lbEmployeID.Text = "Employe ID";
             // 
             // lborderdate
             // 
             this.lborderdate.AutoSize = true;
+            this.lborderdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lborderdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lborderdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lborderdate.Location = new System.Drawing.Point(43, 304);
             this.lborderdate.Name = "lborderdate";
-            this.lborderdate.Size = new System.Drawing.Size(59, 13);
+            this.lborderdate.Size = new System.Drawing.Size(87, 21);
             this.lborderdate.TabIndex = 5;
             this.lborderdate.Text = "Order Date";
             // 
             // lbdireccion
             // 
             this.lbdireccion.AutoSize = true;
+            this.lbdireccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbdireccion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbdireccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbdireccion.Location = new System.Drawing.Point(43, 344);
             this.lbdireccion.Name = "lbdireccion";
-            this.lbdireccion.Size = new System.Drawing.Size(52, 13);
+            this.lbdireccion.Size = new System.Drawing.Size(75, 21);
             this.lbdireccion.TabIndex = 6;
             this.lbdireccion.Text = "Direccion";
             // 
             // lbcodigopostal
             // 
             this.lbcodigopostal.AutoSize = true;
+            this.lbcodigopostal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbcodigopostal.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbcodigopostal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbcodigopostal.Location = new System.Drawing.Point(43, 389);
             this.lbcodigopostal.Name = "lbcodigopostal";
-            this.lbcodigopostal.Size = new System.Drawing.Size(72, 13);
+            this.lbcodigopostal.Size = new System.Drawing.Size(104, 21);
             this.lbcodigopostal.TabIndex = 7;
             this.lbcodigopostal.Text = "Codigo Postal";
             // 
             // lbcountry
             // 
             this.lbcountry.AutoSize = true;
+            this.lbcountry.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbcountry.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbcountry.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbcountry.Location = new System.Drawing.Point(46, 437);
             this.lbcountry.Name = "lbcountry";
-            this.lbcountry.Size = new System.Drawing.Size(27, 13);
+            this.lbcountry.Size = new System.Drawing.Size(38, 21);
             this.lbcountry.TabIndex = 8;
             this.lbcountry.Text = "Pais";
             // 
@@ -198,6 +222,7 @@
             // 
             // btConsultar
             // 
+            this.btConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btConsultar.Location = new System.Drawing.Point(377, 172);
             this.btConsultar.Name = "btConsultar";
             this.btConsultar.Size = new System.Drawing.Size(75, 23);
@@ -208,61 +233,78 @@
             // 
             // btAlta
             // 
-            this.btAlta.Location = new System.Drawing.Point(201, 499);
+            this.btAlta.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAlta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btAlta.Location = new System.Drawing.Point(46, 560);
             this.btAlta.Name = "btAlta";
-            this.btAlta.Size = new System.Drawing.Size(75, 40);
+            this.btAlta.Size = new System.Drawing.Size(109, 40);
             this.btAlta.TabIndex = 18;
             this.btAlta.Text = "Crear Pedido";
-            this.btAlta.UseVisualStyleBackColor = true;
+            this.btAlta.UseVisualStyleBackColor = false;
             this.btAlta.Click += new System.EventHandler(this.btAlta_Click);
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(429, 579);
+            this.btCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btCancelar.Location = new System.Drawing.Point(634, 558);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btCancelar.Size = new System.Drawing.Size(109, 44);
             this.btCancelar.TabIndex = 19;
             this.btCancelar.Text = "Borrar Datos";
-            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.UseVisualStyleBackColor = false;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(675, 579);
+            this.btSalir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btSalir.Location = new System.Drawing.Point(845, 558);
             this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(75, 23);
+            this.btSalir.Size = new System.Drawing.Size(109, 44);
             this.btSalir.TabIndex = 20;
             this.btSalir.Text = "Salir";
-            this.btSalir.UseVisualStyleBackColor = true;
+            this.btSalir.UseVisualStyleBackColor = false;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
             // bteliminarpedido
             // 
-            this.bteliminarpedido.Location = new System.Drawing.Point(429, 497);
+            this.bteliminarpedido.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bteliminarpedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bteliminarpedido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bteliminarpedido.Location = new System.Drawing.Point(418, 558);
             this.bteliminarpedido.Name = "bteliminarpedido";
-            this.bteliminarpedido.Size = new System.Drawing.Size(75, 44);
+            this.bteliminarpedido.Size = new System.Drawing.Size(109, 44);
             this.bteliminarpedido.TabIndex = 21;
             this.bteliminarpedido.Text = "Eliminar Pedido";
-            this.bteliminarpedido.UseVisualStyleBackColor = true;
+            this.bteliminarpedido.UseVisualStyleBackColor = false;
             this.bteliminarpedido.Click += new System.EventHandler(this.bteliminarpedido_Click);
             // 
             // btmodificar
             // 
-            this.btmodificar.Location = new System.Drawing.Point(675, 495);
+            this.btmodificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmodificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btmodificar.Location = new System.Drawing.Point(222, 560);
             this.btmodificar.Name = "btmodificar";
-            this.btmodificar.Size = new System.Drawing.Size(75, 44);
+            this.btmodificar.Size = new System.Drawing.Size(109, 44);
             this.btmodificar.TabIndex = 22;
             this.btmodificar.Text = "Modificar Datos";
-            this.btmodificar.UseVisualStyleBackColor = true;
+            this.btmodificar.UseVisualStyleBackColor = false;
             this.btmodificar.Click += new System.EventHandler(this.btmodificar_Click);
             // 
             // lbmensajemodificar
             // 
             this.lbmensajemodificar.AutoSize = true;
+            this.lbmensajemodificar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmensajemodificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbmensajemodificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbmensajemodificar.Location = new System.Drawing.Point(511, 430);
             this.lbmensajemodificar.Name = "lbmensajemodificar";
-            this.lbmensajemodificar.Size = new System.Drawing.Size(441, 19);
+            this.lbmensajemodificar.Size = new System.Drawing.Size(443, 21);
             this.lbmensajemodificar.TabIndex = 24;
             this.lbmensajemodificar.Text = "Si fuera necesario modifique su pais  y pulse MODIFICAR DATOS";
             this.lbmensajemodificar.Visible = false;
@@ -271,7 +313,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 634);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(1005, 634);
             this.Controls.Add(this.lbmensajemodificar);
             this.Controls.Add(this.btmodificar);
             this.Controls.Add(this.bteliminarpedido);

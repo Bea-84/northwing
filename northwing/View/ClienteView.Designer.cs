@@ -52,15 +52,18 @@
             // labelCustomer
             // 
             this.labelCustomer.AutoSize = true;
-            this.labelCustomer.Location = new System.Drawing.Point(46, 185);
+            this.labelCustomer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelCustomer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelCustomer.Location = new System.Drawing.Point(49, 187);
             this.labelCustomer.Name = "labelCustomer";
-            this.labelCustomer.Size = new System.Drawing.Size(65, 13);
+            this.labelCustomer.Size = new System.Drawing.Size(94, 21);
             this.labelCustomer.TabIndex = 0;
             this.labelCustomer.Text = "CustomerID:";
             // 
             // textBoxCustomer
             // 
-            this.textBoxCustomer.Location = new System.Drawing.Point(148, 178);
+            this.textBoxCustomer.Location = new System.Drawing.Point(168, 186);
             this.textBoxCustomer.Name = "textBoxCustomer";
             this.textBoxCustomer.Size = new System.Drawing.Size(100, 20);
             this.textBoxCustomer.TabIndex = 17;
@@ -69,24 +72,30 @@
             // labelnombre
             // 
             this.labelnombre.AutoSize = true;
-            this.labelnombre.Location = new System.Drawing.Point(46, 228);
+            this.labelnombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelnombre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelnombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelnombre.Location = new System.Drawing.Point(49, 229);
             this.labelnombre.Name = "labelnombre";
-            this.labelnombre.Size = new System.Drawing.Size(47, 13);
+            this.labelnombre.Size = new System.Drawing.Size(71, 21);
             this.labelnombre.TabIndex = 2;
             this.labelnombre.Text = "Nombre:";
             // 
             // labeldireccion
             // 
             this.labeldireccion.AutoSize = true;
-            this.labeldireccion.Location = new System.Drawing.Point(46, 275);
+            this.labeldireccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labeldireccion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldireccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labeldireccion.Location = new System.Drawing.Point(49, 275);
             this.labeldireccion.Name = "labeldireccion";
-            this.labeldireccion.Size = new System.Drawing.Size(55, 13);
+            this.labeldireccion.Size = new System.Drawing.Size(79, 21);
             this.labeldireccion.TabIndex = 3;
             this.labeldireccion.Text = "Dirección:";
             // 
             // textBoxnombre
             // 
-            this.textBoxnombre.Location = new System.Drawing.Point(148, 228);
+            this.textBoxnombre.Location = new System.Drawing.Point(168, 229);
             this.textBoxnombre.Name = "textBoxnombre";
             this.textBoxnombre.Size = new System.Drawing.Size(254, 20);
             this.textBoxnombre.TabIndex = 4;
@@ -94,7 +103,7 @@
             // 
             // textBoxdireccion
             // 
-            this.textBoxdireccion.Location = new System.Drawing.Point(148, 275);
+            this.textBoxdireccion.Location = new System.Drawing.Point(168, 275);
             this.textBoxdireccion.Name = "textBoxdireccion";
             this.textBoxdireccion.Size = new System.Drawing.Size(254, 20);
             this.textBoxdireccion.TabIndex = 5;
@@ -103,24 +112,30 @@
             // labelciudad
             // 
             this.labelciudad.AutoSize = true;
-            this.labelciudad.Location = new System.Drawing.Point(46, 320);
+            this.labelciudad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelciudad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelciudad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelciudad.Location = new System.Drawing.Point(49, 320);
             this.labelciudad.Name = "labelciudad";
-            this.labelciudad.Size = new System.Drawing.Size(43, 13);
+            this.labelciudad.Size = new System.Drawing.Size(62, 21);
             this.labelciudad.TabIndex = 6;
             this.labelciudad.Text = "Ciudad:";
             // 
             // labelpais
             // 
             this.labelpais.AutoSize = true;
-            this.labelpais.Location = new System.Drawing.Point(46, 369);
+            this.labelpais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelpais.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelpais.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelpais.Location = new System.Drawing.Point(49, 369);
             this.labelpais.Name = "labelpais";
-            this.labelpais.Size = new System.Drawing.Size(30, 13);
+            this.labelpais.Size = new System.Drawing.Size(42, 21);
             this.labelpais.TabIndex = 7;
             this.labelpais.Text = "Pais:";
             // 
             // textBoxciudad
             // 
-            this.textBoxciudad.Location = new System.Drawing.Point(148, 320);
+            this.textBoxciudad.Location = new System.Drawing.Point(168, 320);
             this.textBoxciudad.Name = "textBoxciudad";
             this.textBoxciudad.Size = new System.Drawing.Size(254, 20);
             this.textBoxciudad.TabIndex = 8;
@@ -128,7 +143,7 @@
             // 
             // textBoxpais
             // 
-            this.textBoxpais.Location = new System.Drawing.Point(148, 369);
+            this.textBoxpais.Location = new System.Drawing.Point(168, 369);
             this.textBoxpais.Name = "textBoxpais";
             this.textBoxpais.Size = new System.Drawing.Size(254, 20);
             this.textBoxpais.TabIndex = 9;
@@ -136,52 +151,67 @@
             // 
             // btconsultar
             // 
-            this.btconsultar.Location = new System.Drawing.Point(327, 175);
+            this.btconsultar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btconsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btconsultar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btconsultar.Location = new System.Drawing.Point(347, 185);
             this.btconsultar.Name = "btconsultar";
             this.btconsultar.Size = new System.Drawing.Size(75, 23);
             this.btconsultar.TabIndex = 10;
             this.btconsultar.Text = "Consultar";
-            this.btconsultar.UseVisualStyleBackColor = true;
+            this.btconsultar.UseVisualStyleBackColor = false;
             this.btconsultar.Click += new System.EventHandler(this.btconsultar_Click);
             // 
             // btAlta
             // 
-            this.btAlta.Location = new System.Drawing.Point(148, 434);
+            this.btAlta.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAlta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btAlta.Location = new System.Drawing.Point(49, 452);
             this.btAlta.Name = "btAlta";
-            this.btAlta.Size = new System.Drawing.Size(75, 34);
+            this.btAlta.Size = new System.Drawing.Size(114, 50);
             this.btAlta.TabIndex = 11;
             this.btAlta.Text = "Alta Cliente";
-            this.btAlta.UseVisualStyleBackColor = true;
+            this.btAlta.UseVisualStyleBackColor = false;
             this.btAlta.Click += new System.EventHandler(this.btAlta_Click);
             // 
             // btcancelar
             // 
-            this.btcancelar.Location = new System.Drawing.Point(327, 510);
+            this.btcancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btcancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btcancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btcancelar.Location = new System.Drawing.Point(212, 452);
             this.btcancelar.Name = "btcancelar";
-            this.btcancelar.Size = new System.Drawing.Size(75, 23);
+            this.btcancelar.Size = new System.Drawing.Size(114, 50);
             this.btcancelar.TabIndex = 12;
             this.btcancelar.Text = "Borrar Datos";
-            this.btcancelar.UseVisualStyleBackColor = true;
+            this.btcancelar.UseVisualStyleBackColor = false;
             this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(513, 510);
+            this.btSalir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btSalir.Location = new System.Drawing.Point(763, 452);
             this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(75, 23);
+            this.btSalir.Size = new System.Drawing.Size(114, 50);
             this.btSalir.TabIndex = 13;
             this.btSalir.Text = "Salir";
-            this.btSalir.UseVisualStyleBackColor = true;
+            this.btSalir.UseVisualStyleBackColor = false;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
             // btEliminarCliente
             // 
-            this.btEliminarCliente.Location = new System.Drawing.Point(327, 434);
+            this.btEliminarCliente.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btEliminarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEliminarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btEliminarCliente.Location = new System.Drawing.Point(384, 452);
             this.btEliminarCliente.Name = "btEliminarCliente";
-            this.btEliminarCliente.Size = new System.Drawing.Size(75, 34);
+            this.btEliminarCliente.Size = new System.Drawing.Size(114, 50);
             this.btEliminarCliente.TabIndex = 14;
-            this.btEliminarCliente.Text = "Darme de baja";
-            this.btEliminarCliente.UseVisualStyleBackColor = true;
+            this.btEliminarCliente.Text = "Dar de baja a Cliente";
+            this.btEliminarCliente.UseVisualStyleBackColor = false;
             this.btEliminarCliente.Click += new System.EventHandler(this.btEliminarCliente_Click);
             // 
             // lbtitulo
@@ -189,6 +219,7 @@
             this.lbtitulo.AutoSize = true;
             this.lbtitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbtitulo.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbtitulo.Location = new System.Drawing.Point(49, 54);
             this.lbtitulo.Name = "lbtitulo";
             this.lbtitulo.Size = new System.Drawing.Size(204, 35);
@@ -198,30 +229,37 @@
             // lbInstruccion
             // 
             this.lbInstruccion.AutoSize = true;
+            this.lbInstruccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbInstruccion.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInstruccion.Location = new System.Drawing.Point(44, 120);
+            this.lbInstruccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbInstruccion.Location = new System.Drawing.Point(49, 120);
             this.lbInstruccion.Name = "lbInstruccion";
-            this.lbInstruccion.Size = new System.Drawing.Size(245, 26);
+            this.lbInstruccion.Size = new System.Drawing.Size(247, 28);
             this.lbInstruccion.TabIndex = 16;
             this.lbInstruccion.Text = "Introduzca su Customer ID:";
             // 
             // btmodificar
             // 
-            this.btmodificar.Location = new System.Drawing.Point(513, 434);
+            this.btmodificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmodificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btmodificar.Location = new System.Drawing.Point(562, 452);
             this.btmodificar.Name = "btmodificar";
-            this.btmodificar.Size = new System.Drawing.Size(75, 34);
+            this.btmodificar.Size = new System.Drawing.Size(114, 50);
             this.btmodificar.TabIndex = 18;
             this.btmodificar.Text = "Modificar datos";
-            this.btmodificar.UseVisualStyleBackColor = true;
+            this.btmodificar.UseVisualStyleBackColor = false;
             this.btmodificar.Click += new System.EventHandler(this.btmodificar_Click);
             // 
             // lbmensajepais
             // 
             this.lbmensajepais.AutoSize = true;
+            this.lbmensajepais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmensajepais.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbmensajepais.Location = new System.Drawing.Point(425, 370);
+            this.lbmensajepais.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbmensajepais.Location = new System.Drawing.Point(479, 369);
             this.lbmensajepais.Name = "lbmensajepais";
-            this.lbmensajepais.Size = new System.Drawing.Size(396, 19);
+            this.lbmensajepais.Size = new System.Drawing.Size(398, 21);
             this.lbmensajepais.TabIndex = 20;
             this.lbmensajepais.Text = "Si fuera necesario cambie su pais y pulse modificar datos";
             this.lbmensajepais.Visible = false;
@@ -230,7 +268,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 582);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(904, 564);
             this.Controls.Add(this.lbmensajepais);
             this.Controls.Add(this.btmodificar);
             this.Controls.Add(this.lbInstruccion);
