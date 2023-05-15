@@ -73,16 +73,16 @@ namespace northwing.Controller
             return nRows;
         } 
 
-        public int modificarPedido(string country,string orderID)
+        public int modificarPedido(string orderID, string country)
         {
             int nRows = 0;
 
-            string update = "Update orders set ShipCountry='" + country + "' where ProductID = '" + orderID + "';";
+            string update = "Update orders set ShipCountry='" + country + "' where OrderID = " + orderID + ";";
 
             SqlCommand comando = new SqlCommand(update, conection);
             nRows = comando.ExecuteNonQuery();
 
             return nRows;
-        } 
+        }  
     }
 }

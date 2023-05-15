@@ -81,7 +81,7 @@ namespace northwing.View
 
                 if (ds.Customers.Rows.Count >0 ) 
                 {
-                    nRows = pedidoController.altaPedido(this.textBoxcustomerID.Text,textBoxemployeID.Text, textBoxorderdate.Text, textBoxdireccion.Text, textBoxCP.Text, textBoxcountry.Text);
+                    nRows = pedidoController.altaPedido(this.textBoxcustomerID.Text,this.textBoxemployeID.Text, this.textBoxorderdate.Text,this.textBoxdireccion.Text, this.textBoxCP.Text, this.textBoxcountry.Text);
 
                     if (nRows > 0)
                     {
@@ -168,7 +168,7 @@ namespace northwing.View
                 if (!this.textBoxorderID.Text.Equals(""))
                 {
 
-                    nRows = pedidoController.eliminarPedido(textBoxorderID.Text);
+                    nRows = pedidoController.eliminarPedido(this.textBoxorderID.Text);
                     if (nRows > 0)
                     {
                         MessageBox.Show("Pedido eliminado con éxito");
@@ -186,7 +186,7 @@ namespace northwing.View
             }
         }
 
-        private void btmodificar_Click(object sender, EventArgs e)
+        private void btmodificar_Click(object sender, EventArgs e) 
         {
             //botón modificar datos
 
@@ -195,7 +195,7 @@ namespace northwing.View
                 int nRows;
                 if (!this.textBoxorderID.Text.Equals(""))
                 {
-                    nRows = pedidoController.modificarPedido(textBoxorderID.Text,textBoxcountry.Text);
+                    nRows = pedidoController.modificarPedido(this.textBoxorderID.Text,this.textBoxcountry.Text);
                     if (nRows > 0)
                     {
                         MessageBox.Show("Dato modificado con éxito");

@@ -76,7 +76,7 @@ namespace northwing
                 int nRows;
                 if (!this.textBoxproductName.Text.Equals(""))
                 {
-                    nRows = productoController.altaProducto(textBoxproductName.Text,textBoxsupplierID.Text,textBoxcategoryID.Text,textBoxcantidad.Text,textBoxprecioxunidad.Text);
+                    nRows = productoController.altaProducto(this.textBoxproductName.Text,this.textBoxsupplierID.Text,this.textBoxcategoryID.Text,this.textBoxcantidad.Text,this.textBoxprecioxunidad.Text);
 
                     if (nRows > 0)
                     {
@@ -159,7 +159,7 @@ namespace northwing
                 if (!this.textBoxproductID.Text.Equals("") )
                 {
 
-                    nRows = productoController.eliminarProducto(textBoxproductID.Text);
+                    nRows = productoController.eliminarProducto(this.textBoxproductID.Text);
                     if (nRows > 0)
                     {
                         MessageBox.Show("Producto eliminado con éxito");
@@ -186,7 +186,7 @@ namespace northwing
                 int nRows;
                 if(!this.textBoxproductID.Text.Equals(""))
                 {
-                    nRows = productoController.modificarProducto(textBoxproductID.Text,textBoxprecioxunidad.Text);
+                    nRows = productoController.modificarProducto(this.textBoxproductID.Text,this.textBoxprecioxunidad.Text);
                     if (nRows > 0)
                     {
                         MessageBox.Show("Precio producto modificado con éxito"); 
