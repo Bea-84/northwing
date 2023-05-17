@@ -18,7 +18,7 @@ namespace northwing.Controller
             ds = pds;
         } 
 
-        public DSNorthwing consultaTablaPedidos(string OrderID) 
+        public DSNorthwing consultaTablaPedidos(string OrderID)  
         {
             string select = "select * from orders where OrderID=" + OrderID + ";";
 
@@ -36,7 +36,7 @@ namespace northwing.Controller
             int nRows = 0;
 
             string insert = "insert into orders(CustomerID,EmployeeID,OrderDate,ShipAddress,ShipPostalCode,ShipCountry)values";
-            insert += "('"+customerID+"',"+employeeID+","+orderDate+",'"+direccion+"','"+codPostal+"','"+ciudad+"');";
+            insert += "('"+customerID+"',"+employeeID+",'"+DateTime.Parse(orderDate)+"','"+direccion+"','"+codPostal+"','"+ciudad+"');";
 
             SqlCommand comando = new SqlCommand(insert, conection);
             nRows = comando.ExecuteNonQuery();
@@ -45,7 +45,7 @@ namespace northwing.Controller
             //orderID es incremental x lo que la BBDD le asigna numero automaticamente
             //x lo tanto no lo ponemos en el insert
 
-            return nRows;
+            return nRows; 
         }
 
         public DSNorthwing buscarCustomer(string customerID)

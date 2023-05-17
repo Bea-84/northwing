@@ -61,7 +61,7 @@ namespace northwing.View
 
                 this.textBoxcustomerID.Enabled = true;
                 this.cbEmployeID.Enabled = true;
-                this.textBoxorderdate.Enabled = true;
+                this.dateTimecalendario.Enabled = true;
                 this.textBoxdireccion.Enabled = true;
                 this.textBoxCP.Enabled = true;
 
@@ -70,7 +70,7 @@ namespace northwing.View
             {
                 this.textBoxcustomerID.Text = ds.Orders[0].CustomerID;
                 this.textBoxemployeID.Text = ds.Orders[0].EmployeeID.ToString();
-                this.textBoxorderdate.Text = ds.Orders[0].OrderDate.ToString();
+                this.dateTimecalendario.Text = ds.Orders[0].OrderDate.ToString();
                 this.textBoxdireccion.Text = ds.Orders[0].ShipAddress;
                 this.textBoxCP.Text = ds.Orders[0].ShipPostalCode;
                 //si el dato que queremos grabar en la BBDD es null asi le diremos al programa 
@@ -90,7 +90,7 @@ namespace northwing.View
 
                 this.textBoxcustomerID.Enabled = false;
                 this.cbEmployeID.Enabled = false;
-                this.textBoxorderdate.Enabled = false;
+                this.dateTimecalendario.Enabled = false;
                 this.textBoxdireccion.Enabled = false;
                 this.textBoxCP.Enabled = false;
                 MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS"); 
@@ -110,7 +110,7 @@ namespace northwing.View
 
                 if (ds.Customers.Rows.Count >0 ) 
                 {
-                    nRows = pedidoController.altaPedido(this.textBoxcustomerID.Text,this.textBoxemployeID.Text, this.textBoxorderdate.Text,this.textBoxdireccion.Text, this.textBoxCP.Text, this.textBoxcountry.Text);
+                    nRows = pedidoController.altaPedido(this.textBoxcustomerID.Text,this.textBoxemployeID.Text, this.dateTimecalendario.Text,this.textBoxdireccion.Text, this.textBoxCP.Text, this.textBoxcountry.Text);
 
                     if (nRows > 0)
                     {
@@ -288,7 +288,7 @@ namespace northwing.View
             this.textBoxorderID.Text = "";
             this.textBoxcustomerID.Text = "";
             this.textBoxemployeID.Text = "";
-            this.textBoxorderdate.Text = "";
+            this.dateTimecalendario.Text = "";
             this.textBoxdireccion.Text = "";
             this.textBoxCP.Text = "";
             this.textBoxcountry.Text = "";

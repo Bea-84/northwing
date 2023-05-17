@@ -41,7 +41,6 @@
             this.textBoxcustomerID = new System.Windows.Forms.TextBox();
             this.cbEmployeID = new System.Windows.Forms.ComboBox();
             this.textBoxemployeID = new System.Windows.Forms.TextBox();
-            this.textBoxorderdate = new System.Windows.Forms.TextBox();
             this.textBoxdireccion = new System.Windows.Forms.TextBox();
             this.textBoxCP = new System.Windows.Forms.TextBox();
             this.textBoxcountry = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.lbmensajemodificar = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbinstruccion = new System.Windows.Forms.Label();
+            this.dateTimecalendario = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -195,13 +195,6 @@
             this.textBoxemployeID.Size = new System.Drawing.Size(100, 20);
             this.textBoxemployeID.TabIndex = 12;
             // 
-            // textBoxorderdate
-            // 
-            this.textBoxorderdate.Location = new System.Drawing.Point(255, 185);
-            this.textBoxorderdate.Name = "textBoxorderdate";
-            this.textBoxorderdate.Size = new System.Drawing.Size(130, 20);
-            this.textBoxorderdate.TabIndex = 13;
-            // 
             // textBoxdireccion
             // 
             this.textBoxdireccion.Location = new System.Drawing.Point(255, 232);
@@ -316,6 +309,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dateTimecalendario);
             this.panel1.Controls.Add(this.lbinstruccion);
             this.panel1.Controls.Add(this.lbCustomerID);
             this.panel1.Controls.Add(this.textBoxcustomerID);
@@ -323,7 +317,6 @@
             this.panel1.Controls.Add(this.cbEmployeID);
             this.panel1.Controls.Add(this.textBoxemployeID);
             this.panel1.Controls.Add(this.lborderdate);
-            this.panel1.Controls.Add(this.textBoxorderdate);
             this.panel1.Controls.Add(this.textBoxcountry);
             this.panel1.Controls.Add(this.lbdireccion);
             this.panel1.Controls.Add(this.textBoxCP);
@@ -348,6 +341,13 @@
             this.lbinstruccion.TabIndex = 0;
             this.lbinstruccion.Text = "Siga las instrucciones para crear un pedido y pulse CREAR PEDIDO:";
             this.lbinstruccion.Visible = false;
+            // 
+            // dateTimecalendario
+            // 
+            this.dateTimecalendario.Location = new System.Drawing.Point(255, 186);
+            this.dateTimecalendario.Name = "dateTimecalendario";
+            this.dateTimecalendario.Size = new System.Drawing.Size(130, 20);
+            this.dateTimecalendario.TabIndex = 17;
             // 
             // PedidoView
             // 
@@ -392,7 +392,6 @@
         private System.Windows.Forms.TextBox textBoxcustomerID;
         private System.Windows.Forms.ComboBox cbEmployeID;
         private System.Windows.Forms.TextBox textBoxemployeID;
-        private System.Windows.Forms.TextBox textBoxorderdate;
         private System.Windows.Forms.TextBox textBoxdireccion;
         private System.Windows.Forms.TextBox textBoxCP;
         private System.Windows.Forms.TextBox textBoxcountry;
@@ -405,5 +404,6 @@
         private System.Windows.Forms.Label lbmensajemodificar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbinstruccion;
+        private System.Windows.Forms.DateTimePicker dateTimecalendario;
     }
 }
