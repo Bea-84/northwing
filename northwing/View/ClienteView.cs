@@ -29,47 +29,64 @@ namespace northwing
         private void btconsultar_Click(object sender, EventArgs e)
         {
             //botón consultar 
-
+        
             ds = clienteController.consultaTablaCustomers(this.textBoxCustomer.Text);
 
             if (ds.Customers.Rows.Count == 0)
             {
-                MessageBox.Show("Cliente no registrado,indique sus datos y pulse el botón ALTA CLIENTE");
-                borrarDatos();
-                this.lbmensajepais.Visible = false;
-                this.btAlta.Visible = true; 
+
+                 MessageBox.Show("Cliente no registrado,indique sus datos y pulse el botón ALTA CLIENTE");
+                 borrarDatos();
+                 this.btAlta.Visible = true;
+                 this.panel1.Visible = true;
+                 this.lbsubtitulo.Visible = true;
+                 this.lbinstruccion.Visible = true;
+                 this.lbmensajepais.Visible = false;
+
+                 this.textBoxnombre.Enabled = true;
+                 this.textBoxdireccion.Enabled = true;
+                 this.textBoxciudad.Enabled = true;
+
             }
             else
             {
-                this.textBoxCustomer.Text = ds.Customers[0].CustomerID;
-                this.textBoxnombre.Text = ds.Customers[0].CompanyName;
-                this.textBoxdireccion.Text = ds.Customers[0].Address;
-                this.textBoxciudad.Text = ds.Customers[0].City;
-                this.textBoxpais.Text = ds.Customers[0].Country;
+                 this.textBoxCustomer.Text = ds.Customers[0].CustomerID;
+                 this.textBoxnombre.Text = ds.Customers[0].CompanyName;
+                 this.textBoxdireccion.Text = ds.Customers[0].Address;
+                 this.textBoxciudad.Text = ds.Customers[0].City;
+                 this.textBoxpais.Text = ds.Customers[0].Country;
 
-                this.btmodificar.Visible = true; 
-                this.btEliminarCliente.Visible = true;
-                this.lbmensajepais.Visible = true;
-                this.btcancelar.Visible = true;
-                MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS");
-                
+                 this.btmodificar.Visible = true;
+                 this.btbajaCliente.Visible = true;
+                 this.btborrardatos.Visible = true;
+                 this.panel1.Visible = true;
+                 this.lbmensajepais.Visible = true;
+                 this.lbsubtitulo.Visible = true;
+                 this.lbinstruccion.Visible = false;
+
+                 this.textBoxnombre.Enabled = false;
+                 this.textBoxdireccion.Enabled = false;
+                 this.textBoxciudad.Enabled = false;
+                 MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS");
+
             }
             ds.Customers.Clear(); 
-
-        }
+        } 
 
         private void Clientes_Load(object sender, EventArgs e)
         {
             this.btAlta.Visible = false;
-            this.btcancelar.Visible = false;
+            this.btborrardatos.Visible = false;
             this.btmodificar.Visible = false; 
-            this.btEliminarCliente.Visible=false;
+            this.btbajaCliente.Visible=false;
+            this.panel1.Visible = false;
+            this.lbmensajepais.Visible = false; 
         }
 
         private void btAlta_Click(object sender, EventArgs e)
         {
 
-            //alta cliente
+            // Botón alta cliente
 
             try
             {
@@ -86,8 +103,8 @@ namespace northwing
                         
                         this.btAlta.Visible = false; 
                         this.btmodificar.Visible=false;
-                        this.btEliminarCliente.Visible=false;
-                        this.btcancelar.Visible=false;
+                        this.btbajaCliente.Visible=false;
+                        this.btborrardatos.Visible=false;
                         
                     }
                 }
@@ -122,7 +139,7 @@ namespace northwing
         private void btEliminarCliente_Click(object sender, EventArgs e)
         {
 
-            //eliminar cliente
+            // botón eliminar cliente
             //buscar si tiene pedido y si tiene no se puede eliminar 
             ds = clienteController.buscarCustomer(this.textBoxCustomer.Text);
 
@@ -135,16 +152,30 @@ namespace northwing
                 }
                 else
                 {
-                    nRows = clienteController.eliminarCliente(this.textBoxCustomer.Text);
-                    if (nRows > 0)
+                    string mensaje = "¿Seguro que deseas darte de baja?";
+                    string titulo = "Baja cliente";
+                    MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    result = MessageBox.Show(mensaje, titulo, botones);
+
+                    if (result == DialogResult.Yes)
                     {
-                        MessageBox.Show("Se ha dado de baja correctamente,esperamos verle pronto");
-                        borrarDatos();
-                        this.btmodificar.Visible = false;
-                        this.btEliminarCliente.Visible = false;
-                        this.btcancelar.Visible = false;
-                        this.lbmensajepais.Visible = false;
+                        nRows = clienteController.eliminarCliente(this.textBoxCustomer.Text);
+                        if (nRows > 0)
+                        {
+                            MessageBox.Show("Se ha dado de baja correctamente,esperamos verle pronto");
+                            borrarDatos();
+                            this.btmodificar.Visible = false;
+                            this.btbajaCliente.Visible = false;
+                            this.btborrardatos.Visible = false;
+                            this.lbmensajepais.Visible = false;
+                        } 
                     }
+                    else
+                    {
+                        MessageBox.Show("Gracias por confiar en nosotros");
+                    }
+                  
                 }
             }
             catch (Exception ex)
@@ -155,23 +186,38 @@ namespace northwing
 
         private void btmodificar_Click(object sender, EventArgs e)
         {
-            //modificar datos cliente
+            // Botón modificar datos cliente
 
             try
             {
                 int nRows;
                 if (!this.textBoxCustomer.Text.Equals("") && !this.textBoxnombre.Text.Equals(""))
                 {
-                    nRows = clienteController.modificarCliente(this.textBoxCustomer.Text,this.textBoxpais.Text);
-                    if (nRows > 0)
+                    string mensaje = "¿Seguro que desea modificar su pais?";
+                    string titulo = "Modificar Dato";
+                    MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    result = MessageBox.Show(mensaje, titulo, botones);
+
+                    if (result == DialogResult.Yes)
                     {
-                        MessageBox.Show("Dato modificado con éxito");
-                        borrarDatos();
-                        this.lbmensajepais.Visible=false;
-                        this.btEliminarCliente.Visible=false;
-                        this.btmodificar.Visible=false; 
-                        this.btcancelar.Visible=false;
+                        nRows = clienteController.modificarCliente(this.textBoxCustomer.Text, this.textBoxpais.Text);
+                        if (nRows > 0)
+                        {
+                            MessageBox.Show("Dato modificado con éxito");
+                            borrarDatos();
+                            this.lbmensajepais.Visible = false;
+                            this.btbajaCliente.Visible = false;
+                            this.btmodificar.Visible = false;
+                            this.btborrardatos.Visible = false;
+                        } 
                     }
+                    else
+                    {
+                        MessageBox.Show("Modifique sus datos cuando necesite");
+                    }
+
+                 
                 }
             }
             catch (Exception ex)

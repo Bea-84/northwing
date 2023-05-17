@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbtitulo = new System.Windows.Forms.Label();
-            this.lbindicacion = new System.Windows.Forms.Label();
+            this.lbsubtitulo = new System.Windows.Forms.Label();
             this.lborderID = new System.Windows.Forms.Label();
             this.lbCustomerID = new System.Windows.Forms.Label();
             this.lbEmployeID = new System.Windows.Forms.Label();
@@ -52,6 +52,9 @@
             this.bteliminarpedido = new System.Windows.Forms.Button();
             this.btmodificar = new System.Windows.Forms.Button();
             this.lbmensajemodificar = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbinstruccion = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbtitulo
@@ -66,17 +69,17 @@
             this.lbtitulo.TabIndex = 0;
             this.lbtitulo.Text = "Crear Pedido";
             // 
-            // lbindicacion
+            // lbsubtitulo
             // 
-            this.lbindicacion.AutoSize = true;
-            this.lbindicacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbindicacion.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbindicacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbindicacion.Location = new System.Drawing.Point(41, 119);
-            this.lbindicacion.Name = "lbindicacion";
-            this.lbindicacion.Size = new System.Drawing.Size(178, 28);
-            this.lbindicacion.TabIndex = 1;
-            this.lbindicacion.Text = "Indique su OrderID";
+            this.lbsubtitulo.AutoSize = true;
+            this.lbsubtitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbsubtitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbsubtitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbsubtitulo.Location = new System.Drawing.Point(41, 119);
+            this.lbsubtitulo.Name = "lbsubtitulo";
+            this.lbsubtitulo.Size = new System.Drawing.Size(377, 28);
+            this.lbsubtitulo.TabIndex = 1;
+            this.lbsubtitulo.Text = "Introduzca su OrderID y pulse CONSULTAR";
             // 
             // lborderID
             // 
@@ -96,7 +99,7 @@
             this.lbCustomerID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbCustomerID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCustomerID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbCustomerID.Location = new System.Drawing.Point(43, 220);
+            this.lbCustomerID.Location = new System.Drawing.Point(43, 97);
             this.lbCustomerID.Name = "lbCustomerID";
             this.lbCustomerID.Size = new System.Drawing.Size(94, 21);
             this.lbCustomerID.TabIndex = 3;
@@ -108,7 +111,7 @@
             this.lbEmployeID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbEmployeID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmployeID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbEmployeID.Location = new System.Drawing.Point(43, 259);
+            this.lbEmployeID.Location = new System.Drawing.Point(43, 140);
             this.lbEmployeID.Name = "lbEmployeID";
             this.lbEmployeID.Size = new System.Drawing.Size(88, 21);
             this.lbEmployeID.TabIndex = 4;
@@ -120,7 +123,7 @@
             this.lborderdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lborderdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lborderdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lborderdate.Location = new System.Drawing.Point(43, 304);
+            this.lborderdate.Location = new System.Drawing.Point(43, 185);
             this.lborderdate.Name = "lborderdate";
             this.lborderdate.Size = new System.Drawing.Size(87, 21);
             this.lborderdate.TabIndex = 5;
@@ -132,7 +135,7 @@
             this.lbdireccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbdireccion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbdireccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbdireccion.Location = new System.Drawing.Point(43, 344);
+            this.lbdireccion.Location = new System.Drawing.Point(43, 232);
             this.lbdireccion.Name = "lbdireccion";
             this.lbdireccion.Size = new System.Drawing.Size(75, 21);
             this.lbdireccion.TabIndex = 6;
@@ -144,7 +147,7 @@
             this.lbcodigopostal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbcodigopostal.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcodigopostal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbcodigopostal.Location = new System.Drawing.Point(43, 389);
+            this.lbcodigopostal.Location = new System.Drawing.Point(42, 280);
             this.lbcodigopostal.Name = "lbcodigopostal";
             this.lbcodigopostal.Size = new System.Drawing.Size(104, 21);
             this.lbcodigopostal.TabIndex = 7;
@@ -156,7 +159,7 @@
             this.lbcountry.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbcountry.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcountry.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbcountry.Location = new System.Drawing.Point(46, 437);
+            this.lbcountry.Location = new System.Drawing.Point(42, 323);
             this.lbcountry.Name = "lbcountry";
             this.lbcountry.Size = new System.Drawing.Size(38, 21);
             this.lbcountry.TabIndex = 8;
@@ -164,14 +167,14 @@
             // 
             // textBoxorderID
             // 
-            this.textBoxorderID.Location = new System.Drawing.Point(201, 175);
+            this.textBoxorderID.Location = new System.Drawing.Point(176, 179);
             this.textBoxorderID.Name = "textBoxorderID";
             this.textBoxorderID.Size = new System.Drawing.Size(130, 20);
             this.textBoxorderID.TabIndex = 9;
             // 
             // textBoxcustomerID
             // 
-            this.textBoxcustomerID.Location = new System.Drawing.Point(201, 213);
+            this.textBoxcustomerID.Location = new System.Drawing.Point(255, 98);
             this.textBoxcustomerID.Name = "textBoxcustomerID";
             this.textBoxcustomerID.Size = new System.Drawing.Size(251, 20);
             this.textBoxcustomerID.TabIndex = 10;
@@ -179,7 +182,7 @@
             // cbEmployeID
             // 
             this.cbEmployeID.FormattingEnabled = true;
-            this.cbEmployeID.Location = new System.Drawing.Point(201, 251);
+            this.cbEmployeID.Location = new System.Drawing.Point(255, 139);
             this.cbEmployeID.Name = "cbEmployeID";
             this.cbEmployeID.Size = new System.Drawing.Size(130, 21);
             this.cbEmployeID.TabIndex = 11;
@@ -187,48 +190,50 @@
             // 
             // textBoxemployeID
             // 
-            this.textBoxemployeID.Location = new System.Drawing.Point(352, 252);
+            this.textBoxemployeID.Location = new System.Drawing.Point(406, 140);
             this.textBoxemployeID.Name = "textBoxemployeID";
             this.textBoxemployeID.Size = new System.Drawing.Size(100, 20);
             this.textBoxemployeID.TabIndex = 12;
             // 
             // textBoxorderdate
             // 
-            this.textBoxorderdate.Location = new System.Drawing.Point(201, 297);
+            this.textBoxorderdate.Location = new System.Drawing.Point(255, 185);
             this.textBoxorderdate.Name = "textBoxorderdate";
             this.textBoxorderdate.Size = new System.Drawing.Size(130, 20);
             this.textBoxorderdate.TabIndex = 13;
             // 
             // textBoxdireccion
             // 
-            this.textBoxdireccion.Location = new System.Drawing.Point(201, 337);
+            this.textBoxdireccion.Location = new System.Drawing.Point(255, 232);
             this.textBoxdireccion.Name = "textBoxdireccion";
             this.textBoxdireccion.Size = new System.Drawing.Size(130, 20);
             this.textBoxdireccion.TabIndex = 14;
             // 
             // textBoxCP
             // 
-            this.textBoxCP.Location = new System.Drawing.Point(201, 382);
+            this.textBoxCP.Location = new System.Drawing.Point(255, 281);
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(130, 20);
             this.textBoxCP.TabIndex = 15;
             // 
             // textBoxcountry
             // 
-            this.textBoxcountry.Location = new System.Drawing.Point(201, 430);
+            this.textBoxcountry.Location = new System.Drawing.Point(255, 326);
             this.textBoxcountry.Name = "textBoxcountry";
             this.textBoxcountry.Size = new System.Drawing.Size(130, 20);
             this.textBoxcountry.TabIndex = 16;
             // 
             // btConsultar
             // 
+            this.btConsultar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConsultar.Location = new System.Drawing.Point(377, 172);
+            this.btConsultar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btConsultar.Location = new System.Drawing.Point(399, 176);
             this.btConsultar.Name = "btConsultar";
-            this.btConsultar.Size = new System.Drawing.Size(75, 23);
+            this.btConsultar.Size = new System.Drawing.Size(109, 23);
             this.btConsultar.TabIndex = 17;
             this.btConsultar.Text = "Consultar";
-            this.btConsultar.UseVisualStyleBackColor = true;
+            this.btConsultar.UseVisualStyleBackColor = false;
             this.btConsultar.Click += new System.EventHandler(this.btConsultar_Click);
             // 
             // btAlta
@@ -236,7 +241,7 @@
             this.btAlta.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAlta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btAlta.Location = new System.Drawing.Point(46, 560);
+            this.btAlta.Location = new System.Drawing.Point(88, 707);
             this.btAlta.Name = "btAlta";
             this.btAlta.Size = new System.Drawing.Size(109, 40);
             this.btAlta.TabIndex = 18;
@@ -249,9 +254,9 @@
             this.btCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btCancelar.Location = new System.Drawing.Point(634, 558);
+            this.btCancelar.Location = new System.Drawing.Point(620, 176);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(109, 44);
+            this.btCancelar.Size = new System.Drawing.Size(109, 23);
             this.btCancelar.TabIndex = 19;
             this.btCancelar.Text = "Borrar Datos";
             this.btCancelar.UseVisualStyleBackColor = false;
@@ -262,7 +267,7 @@
             this.btSalir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btSalir.Location = new System.Drawing.Point(845, 558);
+            this.btSalir.Location = new System.Drawing.Point(812, 703);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(109, 44);
             this.btSalir.TabIndex = 20;
@@ -275,7 +280,7 @@
             this.bteliminarpedido.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bteliminarpedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bteliminarpedido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bteliminarpedido.Location = new System.Drawing.Point(418, 558);
+            this.bteliminarpedido.Location = new System.Drawing.Point(309, 703);
             this.bteliminarpedido.Name = "bteliminarpedido";
             this.bteliminarpedido.Size = new System.Drawing.Size(109, 44);
             this.bteliminarpedido.TabIndex = 21;
@@ -288,7 +293,7 @@
             this.btmodificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmodificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btmodificar.Location = new System.Drawing.Point(222, 560);
+            this.btmodificar.Location = new System.Drawing.Point(565, 703);
             this.btmodificar.Name = "btmodificar";
             this.btmodificar.Size = new System.Drawing.Size(109, 44);
             this.btmodificar.TabIndex = 22;
@@ -302,46 +307,71 @@
             this.lbmensajemodificar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmensajemodificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmensajemodificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbmensajemodificar.Location = new System.Drawing.Point(511, 430);
+            this.lbmensajemodificar.Location = new System.Drawing.Point(88, 650);
             this.lbmensajemodificar.Name = "lbmensajemodificar";
             this.lbmensajemodificar.Size = new System.Drawing.Size(443, 21);
             this.lbmensajemodificar.TabIndex = 24;
             this.lbmensajemodificar.Text = "Si fuera necesario modifique su pais  y pulse MODIFICAR DATOS";
             this.lbmensajemodificar.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbinstruccion);
+            this.panel1.Controls.Add(this.lbCustomerID);
+            this.panel1.Controls.Add(this.textBoxcustomerID);
+            this.panel1.Controls.Add(this.lbEmployeID);
+            this.panel1.Controls.Add(this.cbEmployeID);
+            this.panel1.Controls.Add(this.textBoxemployeID);
+            this.panel1.Controls.Add(this.lborderdate);
+            this.panel1.Controls.Add(this.textBoxorderdate);
+            this.panel1.Controls.Add(this.textBoxcountry);
+            this.panel1.Controls.Add(this.lbdireccion);
+            this.panel1.Controls.Add(this.textBoxCP);
+            this.panel1.Controls.Add(this.lbcountry);
+            this.panel1.Controls.Add(this.textBoxdireccion);
+            this.panel1.Controls.Add(this.lbcodigopostal);
+            this.panel1.Location = new System.Drawing.Point(46, 228);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(683, 383);
+            this.panel1.TabIndex = 25;
+            this.panel1.Visible = false;
+            // 
+            // lbinstruccion
+            // 
+            this.lbinstruccion.AutoSize = true;
+            this.lbinstruccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbinstruccion.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbinstruccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbinstruccion.Location = new System.Drawing.Point(42, 35);
+            this.lbinstruccion.Name = "lbinstruccion";
+            this.lbinstruccion.Size = new System.Drawing.Size(586, 28);
+            this.lbinstruccion.TabIndex = 0;
+            this.lbinstruccion.Text = "Siga las instrucciones para crear un pedido y pulse CREAR PEDIDO:";
+            this.lbinstruccion.Visible = false;
+            // 
             // PedidoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1005, 634);
+            this.ClientSize = new System.Drawing.Size(992, 772);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbmensajemodificar);
-            this.Controls.Add(this.btmodificar);
             this.Controls.Add(this.bteliminarpedido);
             this.Controls.Add(this.btSalir);
+            this.Controls.Add(this.btmodificar);
             this.Controls.Add(this.btCancelar);
-            this.Controls.Add(this.btAlta);
             this.Controls.Add(this.btConsultar);
-            this.Controls.Add(this.textBoxcountry);
-            this.Controls.Add(this.textBoxCP);
-            this.Controls.Add(this.textBoxdireccion);
-            this.Controls.Add(this.textBoxorderdate);
-            this.Controls.Add(this.textBoxemployeID);
-            this.Controls.Add(this.cbEmployeID);
-            this.Controls.Add(this.textBoxcustomerID);
             this.Controls.Add(this.textBoxorderID);
-            this.Controls.Add(this.lbcountry);
-            this.Controls.Add(this.lbcodigopostal);
-            this.Controls.Add(this.lbdireccion);
-            this.Controls.Add(this.lborderdate);
-            this.Controls.Add(this.lbEmployeID);
-            this.Controls.Add(this.lbCustomerID);
             this.Controls.Add(this.lborderID);
-            this.Controls.Add(this.lbindicacion);
+            this.Controls.Add(this.lbsubtitulo);
+            this.Controls.Add(this.btAlta);
             this.Controls.Add(this.lbtitulo);
             this.Name = "PedidoView";
             this.Text = "PedidoView";
             this.Load += new System.EventHandler(this.PedidoView_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,7 +380,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbtitulo;
-        private System.Windows.Forms.Label lbindicacion;
+        private System.Windows.Forms.Label lbsubtitulo;
         private System.Windows.Forms.Label lborderID;
         private System.Windows.Forms.Label lbCustomerID;
         private System.Windows.Forms.Label lbEmployeID;
@@ -373,5 +403,7 @@
         private System.Windows.Forms.Button bteliminarpedido;
         private System.Windows.Forms.Button btmodificar;
         private System.Windows.Forms.Label lbmensajemodificar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbinstruccion;
     }
 }

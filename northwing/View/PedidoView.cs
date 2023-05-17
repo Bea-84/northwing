@@ -35,6 +35,17 @@ namespace northwing.View
         {
             //botón consultar
 
+            try
+            {
+                decimal id = decimal.Parse(this.textBoxorderID.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Dato introducido incorrecto,por favor introduzca un valor numérico");
+                borrarDatos();
+                return;
+            } 
+
             ds = pedidoController.consultaTablaPedidos(this.textBoxorderID.Text);
 
             if (ds.Orders.Rows.Count == 0)
@@ -43,7 +54,16 @@ namespace northwing.View
                 borrarDatos();
                 this.textBoxorderID.Enabled = false; //método para impedir acceso a usuario
                 this.btAlta.Visible = true;
+                this.panel1.Visible = true;
+                this.lbinstruccion.Visible = true;
+                this.lbsubtitulo.Visible = true;
                 this.lbmensajemodificar.Visible = false;
+
+                this.textBoxcustomerID.Enabled = true;
+                this.cbEmployeID.Enabled = true;
+                this.textBoxorderdate.Enabled = true;
+                this.textBoxdireccion.Enabled = true;
+                this.textBoxCP.Enabled = true;
 
             }
             else 
@@ -64,10 +84,19 @@ namespace northwing.View
                 this.btmodificar.Visible = true;
                 this.btCancelar.Visible = true;
                 this.lbmensajemodificar.Visible = true;
-                MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS");
+                this.panel1.Visible = true;
+                this.lbinstruccion.Visible = false;
+                this.lbsubtitulo.Visible = true;
+
+                this.textBoxcustomerID.Enabled = false;
+                this.cbEmployeID.Enabled = false;
+                this.textBoxorderdate.Enabled = false;
+                this.textBoxdireccion.Enabled = false;
+                this.textBoxCP.Enabled = false;
+                MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS"); 
             }
             ds.Orders.Clear();   
-        }
+        } 
 
         private void btAlta_Click(object sender, EventArgs e)
         {
@@ -125,26 +154,40 @@ namespace northwing.View
             this.btCancelar.Visible = false;
             this.btmodificar.Visible = false;
             this.bteliminarpedido.Visible = false;
+            this.textBoxemployeID.Enabled = false;
+            this.panel1.Visible = false;
+            if(ds.Employees.Rows.Count == 0)
+            {
+                string query = "SELECT EmployeeID,LastName,FirstName FROM Employees;"; //tres valores not null
 
-            string query = "SELECT EmployeeID,LastName,FirstName FROM Employees;"; //tres valores not null
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-            SqlCommand command = new SqlCommand(query, connection);
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataRow row = ds.Employees.NewRow();
+                row[0] = 0;
+                row[1] = "Seleccione empleado";
+                row[2] = " "; //añadimos fila para valor not null, que en este caso tenemos tres
+                ds.Employees.Rows.InsertAt(row, 0);
+                adapter.Fill(ds.Employees);
 
-            DataRow row = ds.Employees.NewRow();
-            row[0] = 0;
-            row[1] = "Seleccione empleado";
-            row[2] = " "; //añadimos fila para valor not null, que en este caso tenemos tres
-            ds.Employees.Rows.InsertAt(row, 0);
-            adapter.Fill(ds.Employees);
+                this.cbEmployeID.DataSource = ds.Employees;
 
-            this.cbEmployeID.DataSource = ds.Employees;
+                this.cbEmployeID.DisplayMember = "LastName"; //lo que ve usuario
+                this.cbEmployeID.ValueMember = "EmployeeID"; //valor que guarda el programa
+                this.cbEmployeID.SelectedIndex = 0;
+                this.textBoxemployeID.Text = string.Empty;
+            }
+            else
+            {
+                this.cbEmployeID.DataSource = ds.Employees;
 
-            this.cbEmployeID.DisplayMember = "LastName"; //lo que ve usuario
-            this.cbEmployeID.ValueMember = "EmployeeID"; //valor que guarda el programa
-            this.cbEmployeID.SelectedIndex = 0;
-            this.textBoxemployeID.Text = string.Empty; 
-        } 
+                this.cbEmployeID.DisplayMember = "LastName"; //lo que ve usuario
+                this.cbEmployeID.ValueMember = "EmployeeID"; //valor que guarda el programa
+                this.cbEmployeID.SelectedIndex = 0;
+                this.textBoxemployeID.Text = string.Empty; 
+            }
+         
+        }  
 
         private void cbEmployeID_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -167,17 +210,29 @@ namespace northwing.View
                 int nRows;
                 if (!this.textBoxorderID.Text.Equals(""))
                 {
+                    string mensaje = "¿Seguro que deseas eliminar el pedido?";
+                    string titulo = "Eliminar pedido";
+                    MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    result = MessageBox.Show(mensaje, titulo, botones);
 
-                    nRows = pedidoController.eliminarPedido(this.textBoxorderID.Text);
-                    if (nRows > 0)
+                    if (result == DialogResult.Yes) 
                     {
-                        MessageBox.Show("Pedido eliminado con éxito");
-                        borrarDatos();
-                        this.btAlta.Visible = false;
-                        this.btmodificar.Visible = false;
-                        this.bteliminarpedido.Visible = false;
-                        this.btCancelar.Visible = false;
+                        nRows = pedidoController.eliminarPedido(this.textBoxorderID.Text);
+                        if (nRows > 0)
+                        {
+                            MessageBox.Show("Pedido eliminado con éxito");
+                            borrarDatos();
+                            this.btAlta.Visible = false;
+                            this.btmodificar.Visible = false;
+                            this.bteliminarpedido.Visible = false;
+                            this.btCancelar.Visible = false;
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("Gracias por confiar en nosotros");
+                    } 
                 }
             }
             catch (Exception ex)
@@ -195,16 +250,31 @@ namespace northwing.View
                 int nRows;
                 if (!this.textBoxorderID.Text.Equals(""))
                 {
-                    nRows = pedidoController.modificarPedido(this.textBoxorderID.Text,this.textBoxcountry.Text);
-                    if (nRows > 0)
+                    string mensaje = "¿Seguro que desea modificar su pais?";
+                    string titulo = "Modificar Dato";
+                    MessageBoxButtons botones = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    result = MessageBox.Show(mensaje, titulo, botones);
+
+                    if (result == DialogResult.Yes)
                     {
-                        MessageBox.Show("Dato modificado con éxito");
-                        borrarDatos();
-                        this.btAlta.Visible = false;
-                        this.btmodificar.Visible = false;
-                        this.bteliminarpedido.Visible = false;
-                        this.btCancelar.Visible = false;
+                        nRows = pedidoController.modificarPedido(this.textBoxorderID.Text, this.textBoxcountry.Text);
+                        if (nRows > 0)
+                        {
+                            MessageBox.Show("Dato modificado con éxito");
+                            borrarDatos();
+                            this.btAlta.Visible = false;
+                            this.btmodificar.Visible = false;
+                            this.bteliminarpedido.Visible = false;
+                            this.btCancelar.Visible = false;
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("Modifique sus datos cuando necesite");
+                    }
+
+             
                 }
             }
             catch (Exception ex)
@@ -223,5 +293,5 @@ namespace northwing.View
             this.textBoxCP.Text = "";
             this.textBoxcountry.Text = "";
         }
-    } 
+    }  
 }

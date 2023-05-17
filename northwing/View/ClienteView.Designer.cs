@@ -40,13 +40,16 @@
             this.textBoxpais = new System.Windows.Forms.TextBox();
             this.btconsultar = new System.Windows.Forms.Button();
             this.btAlta = new System.Windows.Forms.Button();
-            this.btcancelar = new System.Windows.Forms.Button();
+            this.btborrardatos = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
-            this.btEliminarCliente = new System.Windows.Forms.Button();
+            this.btbajaCliente = new System.Windows.Forms.Button();
             this.lbtitulo = new System.Windows.Forms.Label();
-            this.lbInstruccion = new System.Windows.Forms.Label();
+            this.lbsubtitulo = new System.Windows.Forms.Label();
             this.btmodificar = new System.Windows.Forms.Button();
             this.lbmensajepais = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbinstruccion = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelCustomer
@@ -55,7 +58,7 @@
             this.labelCustomer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelCustomer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelCustomer.Location = new System.Drawing.Point(49, 187);
+            this.labelCustomer.Location = new System.Drawing.Point(49, 185);
             this.labelCustomer.Name = "labelCustomer";
             this.labelCustomer.Size = new System.Drawing.Size(94, 21);
             this.labelCustomer.TabIndex = 0;
@@ -63,7 +66,7 @@
             // 
             // textBoxCustomer
             // 
-            this.textBoxCustomer.Location = new System.Drawing.Point(168, 186);
+            this.textBoxCustomer.Location = new System.Drawing.Point(191, 187);
             this.textBoxCustomer.Name = "textBoxCustomer";
             this.textBoxCustomer.Size = new System.Drawing.Size(100, 20);
             this.textBoxCustomer.TabIndex = 17;
@@ -75,7 +78,7 @@
             this.labelnombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelnombre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelnombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelnombre.Location = new System.Drawing.Point(49, 229);
+            this.labelnombre.Location = new System.Drawing.Point(28, 87);
             this.labelnombre.Name = "labelnombre";
             this.labelnombre.Size = new System.Drawing.Size(71, 21);
             this.labelnombre.TabIndex = 2;
@@ -87,7 +90,7 @@
             this.labeldireccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labeldireccion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeldireccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labeldireccion.Location = new System.Drawing.Point(49, 275);
+            this.labeldireccion.Location = new System.Drawing.Point(28, 137);
             this.labeldireccion.Name = "labeldireccion";
             this.labeldireccion.Size = new System.Drawing.Size(79, 21);
             this.labeldireccion.TabIndex = 3;
@@ -95,7 +98,7 @@
             // 
             // textBoxnombre
             // 
-            this.textBoxnombre.Location = new System.Drawing.Point(168, 229);
+            this.textBoxnombre.Location = new System.Drawing.Point(142, 87);
             this.textBoxnombre.Name = "textBoxnombre";
             this.textBoxnombre.Size = new System.Drawing.Size(254, 20);
             this.textBoxnombre.TabIndex = 4;
@@ -103,7 +106,7 @@
             // 
             // textBoxdireccion
             // 
-            this.textBoxdireccion.Location = new System.Drawing.Point(168, 275);
+            this.textBoxdireccion.Location = new System.Drawing.Point(142, 138);
             this.textBoxdireccion.Name = "textBoxdireccion";
             this.textBoxdireccion.Size = new System.Drawing.Size(254, 20);
             this.textBoxdireccion.TabIndex = 5;
@@ -115,7 +118,7 @@
             this.labelciudad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelciudad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelciudad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelciudad.Location = new System.Drawing.Point(49, 320);
+            this.labelciudad.Location = new System.Drawing.Point(28, 183);
             this.labelciudad.Name = "labelciudad";
             this.labelciudad.Size = new System.Drawing.Size(62, 21);
             this.labelciudad.TabIndex = 6;
@@ -127,7 +130,7 @@
             this.labelpais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelpais.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelpais.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelpais.Location = new System.Drawing.Point(49, 369);
+            this.labelpais.Location = new System.Drawing.Point(28, 230);
             this.labelpais.Name = "labelpais";
             this.labelpais.Size = new System.Drawing.Size(42, 21);
             this.labelpais.TabIndex = 7;
@@ -135,7 +138,7 @@
             // 
             // textBoxciudad
             // 
-            this.textBoxciudad.Location = new System.Drawing.Point(168, 320);
+            this.textBoxciudad.Location = new System.Drawing.Point(142, 184);
             this.textBoxciudad.Name = "textBoxciudad";
             this.textBoxciudad.Size = new System.Drawing.Size(254, 20);
             this.textBoxciudad.TabIndex = 8;
@@ -143,7 +146,7 @@
             // 
             // textBoxpais
             // 
-            this.textBoxpais.Location = new System.Drawing.Point(168, 369);
+            this.textBoxpais.Location = new System.Drawing.Point(142, 231);
             this.textBoxpais.Name = "textBoxpais";
             this.textBoxpais.Size = new System.Drawing.Size(254, 20);
             this.textBoxpais.TabIndex = 9;
@@ -154,9 +157,9 @@
             this.btconsultar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btconsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btconsultar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btconsultar.Location = new System.Drawing.Point(347, 185);
+            this.btconsultar.Location = new System.Drawing.Point(354, 183);
             this.btconsultar.Name = "btconsultar";
-            this.btconsultar.Size = new System.Drawing.Size(75, 23);
+            this.btconsultar.Size = new System.Drawing.Size(116, 23);
             this.btconsultar.TabIndex = 10;
             this.btconsultar.Text = "Consultar";
             this.btconsultar.UseVisualStyleBackColor = false;
@@ -167,7 +170,7 @@
             this.btAlta.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAlta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btAlta.Location = new System.Drawing.Point(49, 452);
+            this.btAlta.Location = new System.Drawing.Point(77, 628);
             this.btAlta.Name = "btAlta";
             this.btAlta.Size = new System.Drawing.Size(114, 50);
             this.btAlta.TabIndex = 11;
@@ -175,25 +178,25 @@
             this.btAlta.UseVisualStyleBackColor = false;
             this.btAlta.Click += new System.EventHandler(this.btAlta_Click);
             // 
-            // btcancelar
+            // btborrardatos
             // 
-            this.btcancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btcancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btcancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btcancelar.Location = new System.Drawing.Point(212, 452);
-            this.btcancelar.Name = "btcancelar";
-            this.btcancelar.Size = new System.Drawing.Size(114, 50);
-            this.btcancelar.TabIndex = 12;
-            this.btcancelar.Text = "Borrar Datos";
-            this.btcancelar.UseVisualStyleBackColor = false;
-            this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
+            this.btborrardatos.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btborrardatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btborrardatos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btborrardatos.Location = new System.Drawing.Point(540, 183);
+            this.btborrardatos.Name = "btborrardatos";
+            this.btborrardatos.Size = new System.Drawing.Size(116, 23);
+            this.btborrardatos.TabIndex = 12;
+            this.btborrardatos.Text = "Borrar Datos";
+            this.btborrardatos.UseVisualStyleBackColor = false;
+            this.btborrardatos.Click += new System.EventHandler(this.btcancelar_Click);
             // 
             // btSalir
             // 
             this.btSalir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btSalir.Location = new System.Drawing.Point(763, 452);
+            this.btSalir.Location = new System.Drawing.Point(716, 628);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(114, 50);
             this.btSalir.TabIndex = 13;
@@ -201,18 +204,18 @@
             this.btSalir.UseVisualStyleBackColor = false;
             this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
             // 
-            // btEliminarCliente
+            // btbajaCliente
             // 
-            this.btEliminarCliente.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btEliminarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEliminarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btEliminarCliente.Location = new System.Drawing.Point(384, 452);
-            this.btEliminarCliente.Name = "btEliminarCliente";
-            this.btEliminarCliente.Size = new System.Drawing.Size(114, 50);
-            this.btEliminarCliente.TabIndex = 14;
-            this.btEliminarCliente.Text = "Dar de baja a Cliente";
-            this.btEliminarCliente.UseVisualStyleBackColor = false;
-            this.btEliminarCliente.Click += new System.EventHandler(this.btEliminarCliente_Click);
+            this.btbajaCliente.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btbajaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbajaCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btbajaCliente.Location = new System.Drawing.Point(274, 628);
+            this.btbajaCliente.Name = "btbajaCliente";
+            this.btbajaCliente.Size = new System.Drawing.Size(114, 50);
+            this.btbajaCliente.TabIndex = 14;
+            this.btbajaCliente.Text = "Dar de baja a Cliente";
+            this.btbajaCliente.UseVisualStyleBackColor = false;
+            this.btbajaCliente.Click += new System.EventHandler(this.btEliminarCliente_Click);
             // 
             // lbtitulo
             // 
@@ -226,24 +229,24 @@
             this.lbtitulo.TabIndex = 15;
             this.lbtitulo.Text = "Gestión clientes:";
             // 
-            // lbInstruccion
+            // lbsubtitulo
             // 
-            this.lbInstruccion.AutoSize = true;
-            this.lbInstruccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbInstruccion.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInstruccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbInstruccion.Location = new System.Drawing.Point(49, 120);
-            this.lbInstruccion.Name = "lbInstruccion";
-            this.lbInstruccion.Size = new System.Drawing.Size(247, 28);
-            this.lbInstruccion.TabIndex = 16;
-            this.lbInstruccion.Text = "Introduzca su Customer ID:";
+            this.lbsubtitulo.AutoSize = true;
+            this.lbsubtitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbsubtitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbsubtitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbsubtitulo.Location = new System.Drawing.Point(49, 120);
+            this.lbsubtitulo.Name = "lbsubtitulo";
+            this.lbsubtitulo.Size = new System.Drawing.Size(421, 28);
+            this.lbsubtitulo.TabIndex = 16;
+            this.lbsubtitulo.Text = "Introduzca su Customer ID y pulse CONSULTAR:";
             // 
             // btmodificar
             // 
             this.btmodificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmodificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btmodificar.Location = new System.Drawing.Point(562, 452);
+            this.btmodificar.Location = new System.Drawing.Point(504, 628);
             this.btmodificar.Name = "btmodificar";
             this.btmodificar.Size = new System.Drawing.Size(114, 50);
             this.btmodificar.TabIndex = 18;
@@ -257,41 +260,66 @@
             this.lbmensajepais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmensajepais.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmensajepais.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbmensajepais.Location = new System.Drawing.Point(479, 369);
+            this.lbmensajepais.Location = new System.Drawing.Point(77, 563);
             this.lbmensajepais.Name = "lbmensajepais";
-            this.lbmensajepais.Size = new System.Drawing.Size(398, 21);
+            this.lbmensajepais.Size = new System.Drawing.Size(477, 21);
             this.lbmensajepais.TabIndex = 20;
-            this.lbmensajepais.Text = "Si fuera necesario cambie su pais y pulse modificar datos";
+            this.lbmensajepais.Text = "Si fuera necesario puede cambiar su pais y pulsar MODIFICAR DATOS";
             this.lbmensajepais.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbinstruccion);
+            this.panel1.Controls.Add(this.labelnombre);
+            this.panel1.Controls.Add(this.labeldireccion);
+            this.panel1.Controls.Add(this.labelciudad);
+            this.panel1.Controls.Add(this.textBoxnombre);
+            this.panel1.Controls.Add(this.textBoxdireccion);
+            this.panel1.Controls.Add(this.textBoxciudad);
+            this.panel1.Controls.Add(this.labelpais);
+            this.panel1.Controls.Add(this.textBoxpais);
+            this.panel1.Location = new System.Drawing.Point(49, 240);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(623, 288);
+            this.panel1.TabIndex = 21;
+            this.panel1.Visible = false;
+            // 
+            // lbinstruccion
+            // 
+            this.lbinstruccion.AutoSize = true;
+            this.lbinstruccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbinstruccion.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbinstruccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbinstruccion.Location = new System.Drawing.Point(28, 31);
+            this.lbinstruccion.Name = "lbinstruccion";
+            this.lbinstruccion.Size = new System.Drawing.Size(584, 28);
+            this.lbinstruccion.TabIndex = 0;
+            this.lbinstruccion.Text = "Rellene todos los campos  para darse de alta y pulse ALTA CLIENTE";
+            this.lbinstruccion.Visible = false;
             // 
             // ClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(904, 564);
-            this.Controls.Add(this.lbmensajepais);
-            this.Controls.Add(this.btmodificar);
-            this.Controls.Add(this.lbInstruccion);
-            this.Controls.Add(this.lbtitulo);
-            this.Controls.Add(this.btEliminarCliente);
-            this.Controls.Add(this.btSalir);
-            this.Controls.Add(this.btcancelar);
-            this.Controls.Add(this.btAlta);
-            this.Controls.Add(this.btconsultar);
-            this.Controls.Add(this.textBoxpais);
-            this.Controls.Add(this.textBoxciudad);
-            this.Controls.Add(this.labelpais);
-            this.Controls.Add(this.labelciudad);
-            this.Controls.Add(this.textBoxdireccion);
-            this.Controls.Add(this.textBoxnombre);
-            this.Controls.Add(this.labeldireccion);
-            this.Controls.Add(this.labelnombre);
+            this.ClientSize = new System.Drawing.Size(909, 715);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxCustomer);
             this.Controls.Add(this.labelCustomer);
+            this.Controls.Add(this.lbmensajepais);
+            this.Controls.Add(this.btmodificar);
+            this.Controls.Add(this.lbsubtitulo);
+            this.Controls.Add(this.lbtitulo);
+            this.Controls.Add(this.btSalir);
+            this.Controls.Add(this.btborrardatos);
+            this.Controls.Add(this.btbajaCliente);
+            this.Controls.Add(this.btconsultar);
+            this.Controls.Add(this.btAlta);
             this.Name = "ClienteView";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,12 +339,14 @@
         private System.Windows.Forms.TextBox textBoxpais;
         private System.Windows.Forms.Button btconsultar;
         private System.Windows.Forms.Button btAlta;
-        private System.Windows.Forms.Button btcancelar;
+        private System.Windows.Forms.Button btborrardatos;
         private System.Windows.Forms.Button btSalir;
-        private System.Windows.Forms.Button btEliminarCliente;
+        private System.Windows.Forms.Button btbajaCliente;
         private System.Windows.Forms.Label lbtitulo;
-        private System.Windows.Forms.Label lbInstruccion;
+        private System.Windows.Forms.Label lbsubtitulo;
         private System.Windows.Forms.Button btmodificar;
         private System.Windows.Forms.Label lbmensajepais;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbinstruccion;
     }
 }
