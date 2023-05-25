@@ -20,6 +20,7 @@ namespace northwing.Controller
 
         public DSNorthwing consultaTablaPedidos(string OrderID)  
         {
+            ds.Orders.Clear();
             string select = "select * from orders where OrderID=" + OrderID + ";";
 
             SqlCommand comando = new SqlCommand(select, conection);

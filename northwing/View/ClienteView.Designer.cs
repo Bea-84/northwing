@@ -130,7 +130,7 @@
             this.labelpais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelpais.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelpais.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelpais.Location = new System.Drawing.Point(28, 230);
+            this.labelpais.Location = new System.Drawing.Point(28, 280);
             this.labelpais.Name = "labelpais";
             this.labelpais.Size = new System.Drawing.Size(42, 21);
             this.labelpais.TabIndex = 7;
@@ -146,7 +146,7 @@
             // 
             // textBoxpais
             // 
-            this.textBoxpais.Location = new System.Drawing.Point(142, 231);
+            this.textBoxpais.Location = new System.Drawing.Point(142, 280);
             this.textBoxpais.Name = "textBoxpais";
             this.textBoxpais.Size = new System.Drawing.Size(254, 20);
             this.textBoxpais.TabIndex = 9;
@@ -260,7 +260,7 @@
             this.lbmensajepais.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmensajepais.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmensajepais.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbmensajepais.Location = new System.Drawing.Point(77, 563);
+            this.lbmensajepais.Location = new System.Drawing.Point(28, 233);
             this.lbmensajepais.Name = "lbmensajepais";
             this.lbmensajepais.Size = new System.Drawing.Size(477, 21);
             this.lbmensajepais.TabIndex = 20;
@@ -272,6 +272,7 @@
             this.panel1.Controls.Add(this.lbinstruccion);
             this.panel1.Controls.Add(this.labelnombre);
             this.panel1.Controls.Add(this.labeldireccion);
+            this.panel1.Controls.Add(this.lbmensajepais);
             this.panel1.Controls.Add(this.labelciudad);
             this.panel1.Controls.Add(this.textBoxnombre);
             this.panel1.Controls.Add(this.textBoxdireccion);
@@ -280,7 +281,7 @@
             this.panel1.Controls.Add(this.textBoxpais);
             this.panel1.Location = new System.Drawing.Point(49, 240);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(623, 288);
+            this.panel1.Size = new System.Drawing.Size(623, 348);
             this.panel1.TabIndex = 21;
             this.panel1.Visible = false;
             // 
@@ -306,7 +307,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxCustomer);
             this.Controls.Add(this.labelCustomer);
-            this.Controls.Add(this.lbmensajepais);
             this.Controls.Add(this.btmodificar);
             this.Controls.Add(this.lbsubtitulo);
             this.Controls.Add(this.lbtitulo);

@@ -9,7 +9,7 @@ using System.IO;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using northwing.Model;
-
+using System.Collections.Specialized;
 
 namespace northwing.Controller
 {
@@ -35,6 +35,16 @@ namespace northwing.Controller
             clienteView.Show(); 
         } 
 
+        public void mostrarClienteById(string id)
+        {
+            ClienteController clienteController = new ClienteController(conection, ds);
+            ClienteView clienteView = new ClienteView(conection, clienteController, ds);
+            clienteView.Show();
+            clienteView.cambiarTextoID(id);
+            clienteView.btncosultarClickAux();
+
+        }
+
         public void gestionProductos()
         {
             ProductoController productoController = new ProductoController(conection,ds); 
@@ -44,6 +54,18 @@ namespace northwing.Controller
             productoView.Show();
         }
 
+         public void mostrarProductoById(string id)
+        {
+            ProductoController productoController = new ProductoController(conection,ds); 
+
+            ProductoView productoView = new ProductoView(conection, productoController,ds); 
+
+            productoView.Show();
+            productoView.cambiarTextoId(id);
+            productoView.btnConsultarClickAux();
+        }
+
+
         public void crearPedido()
         {
             PedidoController pedidoController = new PedidoController(conection,ds);
@@ -52,6 +74,27 @@ namespace northwing.Controller
 
             pedidoView.Show();
         }
+
+        public void mostrarPedidoById(string id)
+        {
+
+            PedidoController pedidoController = new PedidoController(conection, ds);
+
+            PedidoView pedidoView = new PedidoView(conection, pedidoController, ds);
+
+            pedidoView.Show();
+            pedidoView.cambiarTextoId(id);
+            pedidoView.btnConsultarClickAux();
+        }
+
+        public void mostrarTablas()
+        {
+            MostrarTablasController mostrarTablasController = new MostrarTablasController(conection, ds);
+
+            MostrarTablasView mostrarTablasView = new MostrarTablasView(conection, ds, mostrarTablasController,this);
+
+            mostrarTablasView.Show();
+        }
      
-    } 
+    }  
 }

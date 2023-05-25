@@ -52,8 +52,8 @@
             this.btmodificar = new System.Windows.Forms.Button();
             this.lbmensajemodificar = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbinstruccion = new System.Windows.Forms.Label();
             this.dateTimecalendario = new System.Windows.Forms.DateTimePicker();
+            this.lbinstruccion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,7 +147,7 @@
             this.lbcodigopostal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbcodigopostal.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcodigopostal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbcodigopostal.Location = new System.Drawing.Point(42, 280);
+            this.lbcodigopostal.Location = new System.Drawing.Point(42, 281);
             this.lbcodigopostal.Name = "lbcodigopostal";
             this.lbcodigopostal.Size = new System.Drawing.Size(104, 21);
             this.lbcodigopostal.TabIndex = 7;
@@ -159,7 +159,7 @@
             this.lbcountry.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbcountry.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcountry.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbcountry.Location = new System.Drawing.Point(42, 323);
+            this.lbcountry.Location = new System.Drawing.Point(42, 380);
             this.lbcountry.Name = "lbcountry";
             this.lbcountry.Size = new System.Drawing.Size(38, 21);
             this.lbcountry.TabIndex = 8;
@@ -211,7 +211,7 @@
             // 
             // textBoxcountry
             // 
-            this.textBoxcountry.Location = new System.Drawing.Point(255, 326);
+            this.textBoxcountry.Location = new System.Drawing.Point(255, 380);
             this.textBoxcountry.Name = "textBoxcountry";
             this.textBoxcountry.Size = new System.Drawing.Size(130, 20);
             this.textBoxcountry.TabIndex = 16;
@@ -300,7 +300,7 @@
             this.lbmensajemodificar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmensajemodificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmensajemodificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbmensajemodificar.Location = new System.Drawing.Point(88, 650);
+            this.lbmensajemodificar.Location = new System.Drawing.Point(42, 333);
             this.lbmensajemodificar.Name = "lbmensajemodificar";
             this.lbmensajemodificar.Size = new System.Drawing.Size(443, 21);
             this.lbmensajemodificar.TabIndex = 24;
@@ -310,6 +310,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dateTimecalendario);
+            this.panel1.Controls.Add(this.lbmensajemodificar);
             this.panel1.Controls.Add(this.lbinstruccion);
             this.panel1.Controls.Add(this.lbCustomerID);
             this.panel1.Controls.Add(this.textBoxcustomerID);
@@ -325,9 +326,16 @@
             this.panel1.Controls.Add(this.lbcodigopostal);
             this.panel1.Location = new System.Drawing.Point(46, 228);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(683, 383);
+            this.panel1.Size = new System.Drawing.Size(683, 432);
             this.panel1.TabIndex = 25;
             this.panel1.Visible = false;
+            // 
+            // dateTimecalendario
+            // 
+            this.dateTimecalendario.Location = new System.Drawing.Point(255, 186);
+            this.dateTimecalendario.Name = "dateTimecalendario";
+            this.dateTimecalendario.Size = new System.Drawing.Size(130, 20);
+            this.dateTimecalendario.TabIndex = 17;
             // 
             // lbinstruccion
             // 
@@ -342,13 +350,6 @@
             this.lbinstruccion.Text = "Siga las instrucciones para crear un pedido y pulse CREAR PEDIDO:";
             this.lbinstruccion.Visible = false;
             // 
-            // dateTimecalendario
-            // 
-            this.dateTimecalendario.Location = new System.Drawing.Point(255, 186);
-            this.dateTimecalendario.Name = "dateTimecalendario";
-            this.dateTimecalendario.Size = new System.Drawing.Size(130, 20);
-            this.dateTimecalendario.TabIndex = 17;
-            // 
             // PedidoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,7 +357,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(992, 772);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lbmensajemodificar);
             this.Controls.Add(this.bteliminarpedido);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btmodificar);

@@ -49,5 +49,11 @@ namespace northwing.View
             //salir
             this.Dispose();
         }
+
+        private void btmostrarTablas_Click(object sender, EventArgs e)
+        {
+            //mostrar tablas
+            menuController.mostrarTablas();
+        }
     } 
 }

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Controller\ClienteController.cs" />
     <Compile Include="Controller\MenuController.cs" />
+    <Compile Include="Controller\MostrarTablasController.cs" />
     <Compile Include="Controller\PedidoController.cs" />
     <Compile Include="Controller\ProductoController.cs" />
     <Compile Include="View\ClienteView.cs">
@@ -64,11 +65,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSNorthwing.xsd</DependentUpon>
     </Compile>
-    <Compile Include="View\ApuntesView.cs">
+    <Compile Include="View\MostrarTablasView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ApuntesView.Designer.cs">
-      <DependentUpon>ApuntesView.cs</DependentUpon>
+    <Compile Include="View\MostrarTablasView.Designer.cs">
+      <DependentUpon>MostrarTablasView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MenuView.cs">
       <SubType>Form</SubType>
@@ -93,8 +94,8 @@
     <EmbeddedResource Include="View\ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ApuntesView.resx">
-      <DependentUpon>ApuntesView.cs</DependentUpon>
+    <EmbeddedResource Include="View\MostrarTablasView.resx">
+      <DependentUpon>MostrarTablasView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MenuView.resx">
       <DependentUpon>MenuView.cs</DependentUpon>

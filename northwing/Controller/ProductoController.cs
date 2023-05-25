@@ -20,6 +20,7 @@ namespace northwing.Controller
 
         public DSNorthwing consultaTablaProductos(string ProductID)
         {
+            ds.Products.Clear();
             string select = "select * from products where ProductID=" + ProductID + ";";
 
             SqlCommand comando = new SqlCommand(select, conection);

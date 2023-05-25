@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,22 +28,24 @@ namespace northwing
             productoController = (ProductoController)pproductoController;
             ds = pds;   
         }
-
-        private void btConsulta_Click(object sender, EventArgs e)
+        public void cambiarTextoId(string  id)
         {
-            //botón consultar
-
+            textBoxproductID.Text = id;
+        }
+        public void btnConsultarClickAux()
+        {
+            
             try
             {
-                decimal id = decimal.Parse(this.textBoxproductID.Text); 
+                decimal id = decimal.Parse(this.textBoxproductID.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Dato introducido incorrecto,por favor introduzca un valor numérico");
                 borrarDatos();
-                return; 
+                return;
             }
-
+            
             ds = productoController.consultaTablaProductos(this.textBoxproductID.Text);
 
             if (ds.Products.Rows.Count == 0)
@@ -54,27 +57,27 @@ namespace northwing
                 this.panel1.Visible = true;
                 this.lbinstruccion.Visible = true;
                 this.lbsubtitulo.Visible = true;
-                this.lbmensajemodificar.Visible =false;
+                this.lbmensajemodificar.Visible = false;
 
-                this.textBoxproductName.Enabled =true ;
+                this.textBoxproductName.Enabled = true;
                 this.textBoxsupplierID.Enabled = true;
                 this.cbCategorias.Enabled = true;
                 this.textBoxcantidad.Enabled = true;
             }
             else
-            {    
+            {
                 this.textBoxproductName.Text = ds.Products[0].ProductName;
                 this.textBoxsupplierID.Text = ds.Products[0].SupplierID.ToString();
                 this.textBoxcategoryID.Text = ds.Products[0].CategoryID.ToString();
                 this.textBoxcantidad.Text = ds.Products[0].QuantityPerUnit.ToString();
-                this.textBoxprecioxunidad.Text = ds.Products[0].QuantityPerUnit.ToString();
+                this.textBoxprecioxunidad.Text = ds.Products[0].UnitPrice.ToString();
 
-                this.bteliminarproducto.Visible=true;
-                this.btModificar.Visible=true;
+                this.bteliminarproducto.Visible = true;
+                this.btModificar.Visible = true;
                 this.btCancelar.Visible = true;
                 this.panel1.Visible = true;
                 this.lbinstruccion.Visible = false;
-                this.lbsubtitulo.Visible=true;
+                this.lbsubtitulo.Visible = true;
                 this.lbmensajemodificar.Visible = true;
 
                 this.textBoxproductName.Enabled = false;
@@ -82,9 +85,14 @@ namespace northwing
                 this.cbCategorias.Enabled = false;
                 this.textBoxcantidad.Enabled = false;
 
-                MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS"); 
+                MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS");
             }
-            ds.Products.Clear(); 
+            
+        }
+
+        private void btConsulta_Click(object sender, EventArgs e)
+        {
+            btnConsultarClickAux();
             
         } 
 
@@ -279,10 +287,41 @@ namespace northwing
 
         private void textBoxproductID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //te metes en diseño en el text box que necesites, pulsas rayo y seleccionas KEY PRESS
+            //te metes en diseño en el text box que necesites, pulsas rayo(eventos) y seleccionas KEY PRESS
             //pulsas dos veces al text box y en el código ponemos lo siguiente
             //de esta manera el usuario no podrá introducir un valor no valido
             //e.Handled = !char.IsDigit(e.KeyChar); 
+            
+            //if (!char.IsDigit(e.KeyChar))
+            //{
+            //    textBoxproductID.Text = "";
+            //}
+            
+        }
+
+        private void textBoxproductID_TextChanged(object sender, EventArgs e)
+        {
+            //textBoxproductID.SelectionStart = textBoxproductID.Text.Length;
+            //string auxCambiar = "";
+            //if (textBoxproductID.Text.Length > 0)
+            //{
+            //    int i = 0;
+            //    foreach(char c in textBoxproductID.Text)
+            //    {
+            //        if (!char.IsDigit(textBoxproductID.Text[i]))
+            //        {
+            //             auxCambiar = textBoxproductID.Text.Substring(0, textBoxproductID.Text.Length - 1);
+            //        }
+            //        else
+            //        {
+            //            auxCambiar = textBoxproductID.Text;
+            //        }
+            //        i++;
+            //    }
+
+            //    textBoxproductID.Text = auxCambiar;
+            //}
+
         } 
     }  
 }

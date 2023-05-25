@@ -21,6 +21,7 @@ namespace northwing.Controller
 
         public DSNorthwing consultaTablaCustomers(String CustomerID)
         {
+            ds.Customers.Clear();
             string select = "select * from customers where CustomerID='" + CustomerID + "';";
 
             SqlCommand comando = new SqlCommand(select, conection);

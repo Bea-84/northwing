@@ -35,6 +35,7 @@
             this.btcrearpedido = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
             this.BTLogotipo = new System.Windows.Forms.Button();
+            this.btmostrarTablas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbseleccionar
@@ -67,7 +68,7 @@
             this.btgestionproductos.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btgestionproductos.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btgestionproductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btgestionproductos.Location = new System.Drawing.Point(320, 556);
+            this.btgestionproductos.Location = new System.Drawing.Point(302, 556);
             this.btgestionproductos.Name = "btgestionproductos";
             this.btgestionproductos.Size = new System.Drawing.Size(127, 61);
             this.btgestionproductos.TabIndex = 3;
@@ -80,7 +81,7 @@
             this.btcrearpedido.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btcrearpedido.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btcrearpedido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btcrearpedido.Location = new System.Drawing.Point(571, 556);
+            this.btcrearpedido.Location = new System.Drawing.Point(558, 556);
             this.btcrearpedido.Name = "btcrearpedido";
             this.btcrearpedido.Size = new System.Drawing.Size(125, 61);
             this.btcrearpedido.TabIndex = 4;
@@ -93,7 +94,7 @@
             this.btSalir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btSalir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btSalir.Location = new System.Drawing.Point(812, 556);
+            this.btSalir.Location = new System.Drawing.Point(1060, 556);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(125, 61);
             this.btSalir.TabIndex = 5;
@@ -104,18 +105,32 @@
             // BTLogotipo
             // 
             this.BTLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("BTLogotipo.Image")));
-            this.BTLogotipo.Location = new System.Drawing.Point(332, 49);
+            this.BTLogotipo.Location = new System.Drawing.Point(443, 63);
             this.BTLogotipo.Name = "BTLogotipo";
             this.BTLogotipo.Size = new System.Drawing.Size(364, 338);
             this.BTLogotipo.TabIndex = 6;
             this.BTLogotipo.UseVisualStyleBackColor = true;
+            // 
+            // btmostrarTablas
+            // 
+            this.btmostrarTablas.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btmostrarTablas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmostrarTablas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btmostrarTablas.Location = new System.Drawing.Point(817, 556);
+            this.btmostrarTablas.Name = "btmostrarTablas";
+            this.btmostrarTablas.Size = new System.Drawing.Size(125, 61);
+            this.btmostrarTablas.TabIndex = 7;
+            this.btmostrarTablas.Text = "Mostrar tablas";
+            this.btmostrarTablas.UseVisualStyleBackColor = false;
+            this.btmostrarTablas.Click += new System.EventHandler(this.btmostrarTablas_Click);
             // 
             // MenuView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1017, 672);
+            this.ClientSize = new System.Drawing.Size(1253, 672);
+            this.Controls.Add(this.btmostrarTablas);
             this.Controls.Add(this.BTLogotipo);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btcrearpedido);
@@ -136,5 +151,6 @@
         private System.Windows.Forms.Button btcrearpedido;
         private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.Button BTLogotipo;
+        private System.Windows.Forms.Button btmostrarTablas;
     }
 }

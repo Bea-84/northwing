@@ -31,10 +31,13 @@ namespace northwing.View
             ds = pds;
         }
 
-        private void btConsultar_Click(object sender, EventArgs e)
+        public void cambiarTextoId(string id)
         {
-            //botón consultar
+            textBoxorderID.Text = id;   
+        }
 
+        public void btnConsultarClickAux()
+        {
             try
             {
                 decimal id = decimal.Parse(this.textBoxorderID.Text);
@@ -44,7 +47,7 @@ namespace northwing.View
                 MessageBox.Show("Dato introducido incorrecto,por favor introduzca un valor numérico");
                 borrarDatos();
                 return;
-            } 
+            }
 
             ds = pedidoController.consultaTablaPedidos(this.textBoxorderID.Text);
 
@@ -66,7 +69,7 @@ namespace northwing.View
                 this.textBoxCP.Enabled = true;
 
             }
-            else 
+            else
             {
                 this.textBoxcustomerID.Text = ds.Orders[0].CustomerID;
                 this.textBoxemployeID.Text = ds.Orders[0].EmployeeID.ToString();
@@ -79,7 +82,7 @@ namespace northwing.View
                 {
                     this.textBoxcountry.Text = "" + ds.Orders[0].ShipCountry;
                 }
-                
+
                 this.bteliminarpedido.Visible = true;
                 this.btmodificar.Visible = true;
                 this.btCancelar.Visible = true;
@@ -93,9 +96,17 @@ namespace northwing.View
                 this.dateTimecalendario.Enabled = false;
                 this.textBoxdireccion.Enabled = false;
                 this.textBoxCP.Enabled = false;
-                MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS"); 
+                MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS");
             }
-            ds.Orders.Clear();   
+
+        }
+
+        private void btConsultar_Click(object sender, EventArgs e)
+        {
+
+            btnConsultarClickAux();
+
+
         } 
 
         private void btAlta_Click(object sender, EventArgs e)

@@ -121,7 +121,7 @@
             this.lbunitPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbunitPrice.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbunitPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbunitPrice.Location = new System.Drawing.Point(22, 328);
+            this.lbunitPrice.Location = new System.Drawing.Point(22, 375);
             this.lbunitPrice.Name = "lbunitPrice";
             this.lbunitPrice.Size = new System.Drawing.Size(82, 21);
             this.lbunitPrice.TabIndex = 5;
@@ -133,6 +133,7 @@
             this.textBoxproductID.Name = "textBoxproductID";
             this.textBoxproductID.Size = new System.Drawing.Size(100, 20);
             this.textBoxproductID.TabIndex = 6;
+            this.textBoxproductID.TextChanged += new System.EventHandler(this.textBoxproductID_TextChanged);
             this.textBoxproductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxproductID_KeyPress);
             // 
             // textBoxproductName
@@ -165,7 +166,7 @@
             // 
             // textBoxprecioxunidad
             // 
-            this.textBoxprecioxunidad.Location = new System.Drawing.Point(217, 329);
+            this.textBoxprecioxunidad.Location = new System.Drawing.Point(217, 376);
             this.textBoxprecioxunidad.Name = "textBoxprecioxunidad";
             this.textBoxprecioxunidad.Size = new System.Drawing.Size(280, 20);
             this.textBoxprecioxunidad.TabIndex = 11;
@@ -186,7 +187,7 @@
             // 
             this.btañadirproducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btañadirproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btañadirproducto.Location = new System.Drawing.Point(81, 680);
+            this.btañadirproducto.Location = new System.Drawing.Point(64, 670);
             this.btañadirproducto.Name = "btañadirproducto";
             this.btañadirproducto.Size = new System.Drawing.Size(99, 46);
             this.btañadirproducto.TabIndex = 13;
@@ -210,7 +211,7 @@
             // 
             this.btSalir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSalir.Location = new System.Drawing.Point(813, 680);
+            this.btSalir.Location = new System.Drawing.Point(810, 670);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(99, 46);
             this.btSalir.TabIndex = 15;
@@ -223,7 +224,7 @@
             this.bteliminarproducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bteliminarproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bteliminarproducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bteliminarproducto.Location = new System.Drawing.Point(310, 680);
+            this.bteliminarproducto.Location = new System.Drawing.Point(309, 670);
             this.bteliminarproducto.Name = "bteliminarproducto";
             this.bteliminarproducto.Size = new System.Drawing.Size(99, 46);
             this.bteliminarproducto.TabIndex = 16;
@@ -268,7 +269,7 @@
             // 
             this.btModificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btModificar.Location = new System.Drawing.Point(557, 680);
+            this.btModificar.Location = new System.Drawing.Point(557, 670);
             this.btModificar.Name = "btModificar";
             this.btModificar.Size = new System.Drawing.Size(99, 46);
             this.btModificar.TabIndex = 20;
@@ -281,7 +282,7 @@
             this.lbmensajemodificar.AutoSize = true;
             this.lbmensajemodificar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmensajemodificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbmensajemodificar.Location = new System.Drawing.Point(59, 614);
+            this.lbmensajemodificar.Location = new System.Drawing.Point(22, 322);
             this.lbmensajemodificar.Name = "lbmensajemodificar";
             this.lbmensajemodificar.Size = new System.Drawing.Size(597, 21);
             this.lbmensajemodificar.TabIndex = 22;
@@ -292,6 +293,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.lbinstruccion);
+            this.panel1.Controls.Add(this.lbmensajemodificar);
             this.panel1.Controls.Add(this.lbProductName);
             this.panel1.Controls.Add(this.textBoxproductName);
             this.panel1.Controls.Add(this.lbsupplierID);
@@ -305,7 +307,7 @@
             this.panel1.Controls.Add(this.lbunitPrice);
             this.panel1.Location = new System.Drawing.Point(59, 185);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 383);
+            this.panel1.Size = new System.Drawing.Size(671, 434);
             this.panel1.TabIndex = 23;
             this.panel1.Visible = false;
             // 
@@ -328,7 +330,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(973, 750);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lbmensajemodificar);
             this.Controls.Add(this.lbsubtitulo);
             this.Controls.Add(this.lbtitulo);
             this.Controls.Add(this.btModificar);
