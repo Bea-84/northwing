@@ -261,6 +261,85 @@ namespace northwing
 
         }
 
-      
+        private void textBoxCustomer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar ==Convert.ToChar(Keys.Enter))
+            {
+
+                ds = clienteController.consultaTablaCustomers(this.textBoxCustomer.Text);
+
+                if (ds.Customers.Rows.Count == 0)
+                {
+
+                    MessageBox.Show("Cliente no registrado,indique sus datos y pulse el botón ALTA CLIENTE");
+                    borrarDatos();
+                    this.btAlta.Visible = true;
+                    this.panel1.Visible = true;
+                    this.lbsubtitulo.Visible = true;
+                    this.lbinstruccion.Visible = true;
+                    this.lbmensajepais.Visible = false;
+
+                    this.textBoxnombre.Enabled = true;
+                    this.textBoxdireccion.Enabled = true;
+                    this.textBoxciudad.Enabled = true;
+
+                }
+                else
+                {
+                    this.textBoxCustomer.Text = ds.Customers[0].CustomerID;
+                    this.textBoxnombre.Text = ds.Customers[0].CompanyName;
+                    this.textBoxdireccion.Text = ds.Customers[0].Address;
+                    this.textBoxciudad.Text = ds.Customers[0].City;
+                    this.textBoxpais.Text = ds.Customers[0].Country;
+
+                    this.btmodificar.Visible = true;
+                    this.btbajaCliente.Visible = true;
+                    this.btborrardatos.Visible = true;
+                    this.panel1.Visible = true;
+                    this.lbmensajepais.Visible = true;
+                    this.lbsubtitulo.Visible = true;
+                    this.lbinstruccion.Visible = false;
+
+                    this.textBoxnombre.Enabled = false;
+                    this.textBoxdireccion.Enabled = false;
+                    this.textBoxciudad.Enabled = false;
+                    MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS");
+
+                }
+            }
+        }
+
+        private void textBoxpais_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    int nRows;
+
+                    if (!this.textBoxCustomer.Text.Equals("") && !this.textBoxnombre.Text.Equals(""))
+                    {
+                        nRows = clienteController.altaCliente(this.textBoxCustomer.Text, this.textBoxnombre.Text, this.textBoxdireccion.Text, this.textBoxciudad.Text, this.textBoxpais.Text);
+
+                        if (nRows > 0)
+                        {
+                            MessageBox.Show("Se ha dado de alta correctamente,Bienvenid/@");
+                            borrarDatos();
+
+                            this.btAlta.Visible = false;
+                            this.btmodificar.Visible = false;
+                            this.btbajaCliente.Visible = false;
+                            this.btborrardatos.Visible = false;
+
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        } 
     }  
 }

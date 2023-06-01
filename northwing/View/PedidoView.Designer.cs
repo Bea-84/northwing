@@ -63,9 +63,10 @@
             this.lbtitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbtitulo.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbtitulo.Location = new System.Drawing.Point(46, 51);
+            this.lbtitulo.Location = new System.Drawing.Point(61, 63);
+            this.lbtitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbtitulo.Name = "lbtitulo";
-            this.lbtitulo.Size = new System.Drawing.Size(162, 35);
+            this.lbtitulo.Size = new System.Drawing.Size(200, 43);
             this.lbtitulo.TabIndex = 0;
             this.lbtitulo.Text = "Crear Pedido";
             // 
@@ -75,9 +76,10 @@
             this.lbsubtitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbsubtitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbsubtitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbsubtitulo.Location = new System.Drawing.Point(41, 119);
+            this.lbsubtitulo.Location = new System.Drawing.Point(55, 146);
+            this.lbsubtitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbsubtitulo.Name = "lbsubtitulo";
-            this.lbsubtitulo.Size = new System.Drawing.Size(377, 28);
+            this.lbsubtitulo.Size = new System.Drawing.Size(485, 35);
             this.lbsubtitulo.TabIndex = 1;
             this.lbsubtitulo.Text = "Introduzca su OrderID y pulse CONSULTAR";
             // 
@@ -87,9 +89,10 @@
             this.lborderID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lborderID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lborderID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lborderID.Location = new System.Drawing.Point(43, 178);
+            this.lborderID.Location = new System.Drawing.Point(57, 219);
+            this.lborderID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lborderID.Name = "lborderID";
-            this.lborderID.Size = new System.Drawing.Size(69, 21);
+            this.lborderID.Size = new System.Drawing.Size(84, 26);
             this.lborderID.TabIndex = 2;
             this.lborderID.Text = "Order ID";
             // 
@@ -99,9 +102,10 @@
             this.lbCustomerID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbCustomerID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCustomerID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbCustomerID.Location = new System.Drawing.Point(43, 97);
+            this.lbCustomerID.Location = new System.Drawing.Point(57, 119);
+            this.lbCustomerID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCustomerID.Name = "lbCustomerID";
-            this.lbCustomerID.Size = new System.Drawing.Size(94, 21);
+            this.lbCustomerID.Size = new System.Drawing.Size(116, 26);
             this.lbCustomerID.TabIndex = 3;
             this.lbCustomerID.Text = "Customer ID";
             // 
@@ -111,9 +115,10 @@
             this.lbEmployeID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbEmployeID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmployeID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbEmployeID.Location = new System.Drawing.Point(43, 140);
+            this.lbEmployeID.Location = new System.Drawing.Point(57, 172);
+            this.lbEmployeID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmployeID.Name = "lbEmployeID";
-            this.lbEmployeID.Size = new System.Drawing.Size(88, 21);
+            this.lbEmployeID.Size = new System.Drawing.Size(107, 26);
             this.lbEmployeID.TabIndex = 4;
             this.lbEmployeID.Text = "Employe ID";
             // 
@@ -123,9 +128,10 @@
             this.lborderdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lborderdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lborderdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lborderdate.Location = new System.Drawing.Point(43, 185);
+            this.lborderdate.Location = new System.Drawing.Point(57, 228);
+            this.lborderdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lborderdate.Name = "lborderdate";
-            this.lborderdate.Size = new System.Drawing.Size(87, 21);
+            this.lborderdate.Size = new System.Drawing.Size(106, 26);
             this.lborderdate.TabIndex = 5;
             this.lborderdate.Text = "Order Date";
             // 
@@ -135,9 +141,10 @@
             this.lbdireccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbdireccion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbdireccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbdireccion.Location = new System.Drawing.Point(43, 232);
+            this.lbdireccion.Location = new System.Drawing.Point(57, 286);
+            this.lbdireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbdireccion.Name = "lbdireccion";
-            this.lbdireccion.Size = new System.Drawing.Size(75, 21);
+            this.lbdireccion.Size = new System.Drawing.Size(90, 26);
             this.lbdireccion.TabIndex = 6;
             this.lbdireccion.Text = "Direccion";
             // 
@@ -147,9 +154,10 @@
             this.lbcodigopostal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbcodigopostal.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcodigopostal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbcodigopostal.Location = new System.Drawing.Point(42, 281);
+            this.lbcodigopostal.Location = new System.Drawing.Point(56, 346);
+            this.lbcodigopostal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbcodigopostal.Name = "lbcodigopostal";
-            this.lbcodigopostal.Size = new System.Drawing.Size(104, 21);
+            this.lbcodigopostal.Size = new System.Drawing.Size(127, 26);
             this.lbcodigopostal.TabIndex = 7;
             this.lbcodigopostal.Text = "Codigo Postal";
             // 
@@ -159,71 +167,82 @@
             this.lbcountry.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbcountry.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcountry.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbcountry.Location = new System.Drawing.Point(42, 380);
+            this.lbcountry.Location = new System.Drawing.Point(56, 468);
+            this.lbcountry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbcountry.Name = "lbcountry";
-            this.lbcountry.Size = new System.Drawing.Size(38, 21);
+            this.lbcountry.Size = new System.Drawing.Size(46, 26);
             this.lbcountry.TabIndex = 8;
             this.lbcountry.Text = "Pais";
             // 
             // textBoxorderID
             // 
-            this.textBoxorderID.Location = new System.Drawing.Point(176, 179);
+            this.textBoxorderID.Location = new System.Drawing.Point(235, 220);
+            this.textBoxorderID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxorderID.Name = "textBoxorderID";
-            this.textBoxorderID.Size = new System.Drawing.Size(130, 20);
+            this.textBoxorderID.Size = new System.Drawing.Size(172, 22);
             this.textBoxorderID.TabIndex = 9;
+            this.textBoxorderID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxorderID_KeyPress);
             // 
             // textBoxcustomerID
             // 
-            this.textBoxcustomerID.Location = new System.Drawing.Point(255, 98);
+            this.textBoxcustomerID.Location = new System.Drawing.Point(340, 121);
+            this.textBoxcustomerID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxcustomerID.Name = "textBoxcustomerID";
-            this.textBoxcustomerID.Size = new System.Drawing.Size(251, 20);
+            this.textBoxcustomerID.Size = new System.Drawing.Size(333, 22);
             this.textBoxcustomerID.TabIndex = 10;
             // 
             // cbEmployeID
             // 
             this.cbEmployeID.FormattingEnabled = true;
-            this.cbEmployeID.Location = new System.Drawing.Point(255, 139);
+            this.cbEmployeID.Location = new System.Drawing.Point(340, 171);
+            this.cbEmployeID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbEmployeID.Name = "cbEmployeID";
-            this.cbEmployeID.Size = new System.Drawing.Size(130, 21);
+            this.cbEmployeID.Size = new System.Drawing.Size(172, 24);
             this.cbEmployeID.TabIndex = 11;
             this.cbEmployeID.SelectedIndexChanged += new System.EventHandler(this.cbEmployeID_SelectedIndexChanged);
             // 
             // textBoxemployeID
             // 
-            this.textBoxemployeID.Location = new System.Drawing.Point(406, 140);
+            this.textBoxemployeID.Location = new System.Drawing.Point(541, 172);
+            this.textBoxemployeID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxemployeID.Name = "textBoxemployeID";
-            this.textBoxemployeID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxemployeID.Size = new System.Drawing.Size(132, 22);
             this.textBoxemployeID.TabIndex = 12;
             // 
             // textBoxdireccion
             // 
-            this.textBoxdireccion.Location = new System.Drawing.Point(255, 232);
+            this.textBoxdireccion.Location = new System.Drawing.Point(340, 286);
+            this.textBoxdireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxdireccion.Name = "textBoxdireccion";
-            this.textBoxdireccion.Size = new System.Drawing.Size(130, 20);
+            this.textBoxdireccion.Size = new System.Drawing.Size(172, 22);
             this.textBoxdireccion.TabIndex = 14;
             // 
             // textBoxCP
             // 
-            this.textBoxCP.Location = new System.Drawing.Point(255, 281);
+            this.textBoxCP.Location = new System.Drawing.Point(340, 346);
+            this.textBoxCP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxCP.Name = "textBoxCP";
-            this.textBoxCP.Size = new System.Drawing.Size(130, 20);
+            this.textBoxCP.Size = new System.Drawing.Size(172, 22);
             this.textBoxCP.TabIndex = 15;
             // 
             // textBoxcountry
             // 
-            this.textBoxcountry.Location = new System.Drawing.Point(255, 380);
+            this.textBoxcountry.Location = new System.Drawing.Point(340, 468);
+            this.textBoxcountry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxcountry.Name = "textBoxcountry";
-            this.textBoxcountry.Size = new System.Drawing.Size(130, 20);
+            this.textBoxcountry.Size = new System.Drawing.Size(172, 22);
             this.textBoxcountry.TabIndex = 16;
+            this.textBoxcountry.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxcountry_KeyPress);
             // 
             // btConsultar
             // 
             this.btConsultar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btConsultar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btConsultar.Location = new System.Drawing.Point(399, 176);
+            this.btConsultar.Location = new System.Drawing.Point(532, 217);
+            this.btConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btConsultar.Name = "btConsultar";
-            this.btConsultar.Size = new System.Drawing.Size(109, 23);
+            this.btConsultar.Size = new System.Drawing.Size(145, 28);
             this.btConsultar.TabIndex = 17;
             this.btConsultar.Text = "Consultar";
             this.btConsultar.UseVisualStyleBackColor = false;
@@ -234,9 +253,10 @@
             this.btAlta.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAlta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btAlta.Location = new System.Drawing.Point(88, 707);
+            this.btAlta.Location = new System.Drawing.Point(117, 870);
+            this.btAlta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btAlta.Name = "btAlta";
-            this.btAlta.Size = new System.Drawing.Size(109, 40);
+            this.btAlta.Size = new System.Drawing.Size(145, 49);
             this.btAlta.TabIndex = 18;
             this.btAlta.Text = "Crear Pedido";
             this.btAlta.UseVisualStyleBackColor = false;
@@ -247,9 +267,10 @@
             this.btCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btCancelar.Location = new System.Drawing.Point(620, 176);
+            this.btCancelar.Location = new System.Drawing.Point(827, 217);
+            this.btCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(109, 23);
+            this.btCancelar.Size = new System.Drawing.Size(145, 28);
             this.btCancelar.TabIndex = 19;
             this.btCancelar.Text = "Borrar Datos";
             this.btCancelar.UseVisualStyleBackColor = false;
@@ -260,9 +281,10 @@
             this.btSalir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btSalir.Location = new System.Drawing.Point(812, 703);
+            this.btSalir.Location = new System.Drawing.Point(1083, 865);
+            this.btSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(109, 44);
+            this.btSalir.Size = new System.Drawing.Size(145, 54);
             this.btSalir.TabIndex = 20;
             this.btSalir.Text = "Salir";
             this.btSalir.UseVisualStyleBackColor = false;
@@ -273,9 +295,10 @@
             this.bteliminarpedido.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bteliminarpedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bteliminarpedido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bteliminarpedido.Location = new System.Drawing.Point(309, 703);
+            this.bteliminarpedido.Location = new System.Drawing.Point(412, 865);
+            this.bteliminarpedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bteliminarpedido.Name = "bteliminarpedido";
-            this.bteliminarpedido.Size = new System.Drawing.Size(109, 44);
+            this.bteliminarpedido.Size = new System.Drawing.Size(145, 54);
             this.bteliminarpedido.TabIndex = 21;
             this.bteliminarpedido.Text = "Eliminar Pedido";
             this.bteliminarpedido.UseVisualStyleBackColor = false;
@@ -286,9 +309,10 @@
             this.btmodificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmodificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btmodificar.Location = new System.Drawing.Point(565, 703);
+            this.btmodificar.Location = new System.Drawing.Point(753, 865);
+            this.btmodificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btmodificar.Name = "btmodificar";
-            this.btmodificar.Size = new System.Drawing.Size(109, 44);
+            this.btmodificar.Size = new System.Drawing.Size(145, 54);
             this.btmodificar.TabIndex = 22;
             this.btmodificar.Text = "Modificar Datos";
             this.btmodificar.UseVisualStyleBackColor = false;
@@ -300,9 +324,10 @@
             this.lbmensajemodificar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmensajemodificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbmensajemodificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbmensajemodificar.Location = new System.Drawing.Point(42, 333);
+            this.lbmensajemodificar.Location = new System.Drawing.Point(56, 410);
+            this.lbmensajemodificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbmensajemodificar.Name = "lbmensajemodificar";
-            this.lbmensajemodificar.Size = new System.Drawing.Size(443, 21);
+            this.lbmensajemodificar.Size = new System.Drawing.Size(545, 26);
             this.lbmensajemodificar.TabIndex = 24;
             this.lbmensajemodificar.Text = "Si fuera necesario modifique su pais  y pulse MODIFICAR DATOS";
             this.lbmensajemodificar.Visible = false;
@@ -324,17 +349,19 @@
             this.panel1.Controls.Add(this.lbcountry);
             this.panel1.Controls.Add(this.textBoxdireccion);
             this.panel1.Controls.Add(this.lbcodigopostal);
-            this.panel1.Location = new System.Drawing.Point(46, 228);
+            this.panel1.Location = new System.Drawing.Point(61, 281);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(683, 432);
+            this.panel1.Size = new System.Drawing.Size(911, 532);
             this.panel1.TabIndex = 25;
             this.panel1.Visible = false;
             // 
             // dateTimecalendario
             // 
-            this.dateTimecalendario.Location = new System.Drawing.Point(255, 186);
+            this.dateTimecalendario.Location = new System.Drawing.Point(340, 229);
+            this.dateTimecalendario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimecalendario.Name = "dateTimecalendario";
-            this.dateTimecalendario.Size = new System.Drawing.Size(130, 20);
+            this.dateTimecalendario.Size = new System.Drawing.Size(172, 22);
             this.dateTimecalendario.TabIndex = 17;
             // 
             // lbinstruccion
@@ -343,19 +370,20 @@
             this.lbinstruccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbinstruccion.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbinstruccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbinstruccion.Location = new System.Drawing.Point(42, 35);
+            this.lbinstruccion.Location = new System.Drawing.Point(56, 43);
+            this.lbinstruccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbinstruccion.Name = "lbinstruccion";
-            this.lbinstruccion.Size = new System.Drawing.Size(586, 28);
+            this.lbinstruccion.Size = new System.Drawing.Size(754, 35);
             this.lbinstruccion.TabIndex = 0;
             this.lbinstruccion.Text = "Siga las instrucciones para crear un pedido y pulse CREAR PEDIDO:";
             this.lbinstruccion.Visible = false;
             // 
             // PedidoView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(992, 772);
+            this.ClientSize = new System.Drawing.Size(1323, 950);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bteliminarpedido);
             this.Controls.Add(this.btSalir);
@@ -367,6 +395,7 @@
             this.Controls.Add(this.lbsubtitulo);
             this.Controls.Add(this.btAlta);
             this.Controls.Add(this.lbtitulo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PedidoView";
             this.Text = "PedidoView";
             this.Load += new System.EventHandler(this.PedidoView_Load);

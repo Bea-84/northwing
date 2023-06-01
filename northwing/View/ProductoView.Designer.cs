@@ -61,9 +61,10 @@
             this.lbProductID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbProductID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProductID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbProductID.Location = new System.Drawing.Point(59, 143);
+            this.lbProductID.Location = new System.Drawing.Point(79, 176);
+            this.lbProductID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbProductID.Name = "lbProductID";
-            this.lbProductID.Size = new System.Drawing.Size(88, 21);
+            this.lbProductID.Size = new System.Drawing.Size(107, 26);
             this.lbProductID.TabIndex = 0;
             this.lbProductID.Text = "Product ID:";
             // 
@@ -73,9 +74,10 @@
             this.lbProductName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbProductName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProductName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbProductName.Location = new System.Drawing.Point(22, 97);
+            this.lbProductName.Location = new System.Drawing.Point(29, 119);
+            this.lbProductName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbProductName.Name = "lbProductName";
-            this.lbProductName.Size = new System.Drawing.Size(114, 21);
+            this.lbProductName.Size = new System.Drawing.Size(138, 26);
             this.lbProductName.TabIndex = 1;
             this.lbProductName.Text = "Product Name:";
             // 
@@ -85,9 +87,10 @@
             this.lbsupplierID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbsupplierID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbsupplierID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbsupplierID.Location = new System.Drawing.Point(22, 153);
+            this.lbsupplierID.Location = new System.Drawing.Point(29, 188);
+            this.lbsupplierID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbsupplierID.Name = "lbsupplierID";
-            this.lbsupplierID.Size = new System.Drawing.Size(90, 21);
+            this.lbsupplierID.Size = new System.Drawing.Size(110, 26);
             this.lbsupplierID.TabIndex = 2;
             this.lbsupplierID.Text = "Supplier ID:";
             // 
@@ -97,9 +100,10 @@
             this.lbCategoryID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbCategoryID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCategoryID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbCategoryID.Location = new System.Drawing.Point(22, 209);
+            this.lbCategoryID.Location = new System.Drawing.Point(29, 257);
+            this.lbCategoryID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCategoryID.Name = "lbCategoryID";
-            this.lbCategoryID.Size = new System.Drawing.Size(94, 21);
+            this.lbCategoryID.Size = new System.Drawing.Size(115, 26);
             this.lbCategoryID.TabIndex = 3;
             this.lbCategoryID.Text = "Category ID:";
             // 
@@ -109,9 +113,10 @@
             this.lbcantidad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbcantidad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbcantidad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbcantidad.Location = new System.Drawing.Point(22, 267);
+            this.lbcantidad.Location = new System.Drawing.Point(29, 329);
+            this.lbcantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbcantidad.Name = "lbcantidad";
-            this.lbcantidad.Size = new System.Drawing.Size(118, 21);
+            this.lbcantidad.Size = new System.Drawing.Size(145, 26);
             this.lbcantidad.TabIndex = 4;
             this.lbcantidad.Text = "Quantity x unit:";
             // 
@@ -121,63 +126,72 @@
             this.lbunitPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbunitPrice.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbunitPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbunitPrice.Location = new System.Drawing.Point(22, 375);
+            this.lbunitPrice.Location = new System.Drawing.Point(29, 462);
+            this.lbunitPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbunitPrice.Name = "lbunitPrice";
-            this.lbunitPrice.Size = new System.Drawing.Size(82, 21);
+            this.lbunitPrice.Size = new System.Drawing.Size(100, 26);
             this.lbunitPrice.TabIndex = 5;
             this.lbunitPrice.Text = "Unit price:";
             // 
             // textBoxproductID
             // 
-            this.textBoxproductID.Location = new System.Drawing.Point(208, 144);
+            this.textBoxproductID.Location = new System.Drawing.Point(277, 177);
+            this.textBoxproductID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxproductID.Name = "textBoxproductID";
-            this.textBoxproductID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxproductID.Size = new System.Drawing.Size(132, 22);
             this.textBoxproductID.TabIndex = 6;
             this.textBoxproductID.TextChanged += new System.EventHandler(this.textBoxproductID_TextChanged);
             this.textBoxproductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxproductID_KeyPress);
             // 
             // textBoxproductName
             // 
-            this.textBoxproductName.Location = new System.Drawing.Point(217, 98);
+            this.textBoxproductName.Location = new System.Drawing.Point(289, 121);
+            this.textBoxproductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxproductName.Name = "textBoxproductName";
-            this.textBoxproductName.Size = new System.Drawing.Size(280, 20);
+            this.textBoxproductName.Size = new System.Drawing.Size(372, 22);
             this.textBoxproductName.TabIndex = 7;
             // 
             // textBoxsupplierID
             // 
-            this.textBoxsupplierID.Location = new System.Drawing.Point(217, 154);
+            this.textBoxsupplierID.Location = new System.Drawing.Point(289, 190);
+            this.textBoxsupplierID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxsupplierID.Name = "textBoxsupplierID";
-            this.textBoxsupplierID.Size = new System.Drawing.Size(280, 20);
+            this.textBoxsupplierID.Size = new System.Drawing.Size(372, 22);
             this.textBoxsupplierID.TabIndex = 8;
             // 
             // textBoxcategoryID
             // 
-            this.textBoxcategoryID.Location = new System.Drawing.Point(390, 211);
+            this.textBoxcategoryID.Location = new System.Drawing.Point(520, 260);
+            this.textBoxcategoryID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxcategoryID.Name = "textBoxcategoryID";
-            this.textBoxcategoryID.Size = new System.Drawing.Size(107, 20);
+            this.textBoxcategoryID.Size = new System.Drawing.Size(141, 22);
             this.textBoxcategoryID.TabIndex = 9;
             // 
             // textBoxcantidad
             // 
-            this.textBoxcantidad.Location = new System.Drawing.Point(217, 268);
+            this.textBoxcantidad.Location = new System.Drawing.Point(289, 330);
+            this.textBoxcantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxcantidad.Name = "textBoxcantidad";
-            this.textBoxcantidad.Size = new System.Drawing.Size(280, 20);
+            this.textBoxcantidad.Size = new System.Drawing.Size(372, 22);
             this.textBoxcantidad.TabIndex = 10;
             // 
             // textBoxprecioxunidad
             // 
-            this.textBoxprecioxunidad.Location = new System.Drawing.Point(217, 376);
+            this.textBoxprecioxunidad.Location = new System.Drawing.Point(289, 463);
+            this.textBoxprecioxunidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxprecioxunidad.Name = "textBoxprecioxunidad";
-            this.textBoxprecioxunidad.Size = new System.Drawing.Size(280, 20);
+            this.textBoxprecioxunidad.Size = new System.Drawing.Size(372, 22);
             this.textBoxprecioxunidad.TabIndex = 11;
+            this.textBoxprecioxunidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxprecioxunidad_KeyPress);
             // 
             // btConsulta
             // 
             this.btConsulta.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConsulta.Location = new System.Drawing.Point(405, 144);
+            this.btConsulta.Location = new System.Drawing.Point(540, 177);
+            this.btConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btConsulta.Name = "btConsulta";
-            this.btConsulta.Size = new System.Drawing.Size(99, 23);
+            this.btConsulta.Size = new System.Drawing.Size(132, 28);
             this.btConsulta.TabIndex = 12;
             this.btConsulta.Text = "Consultar";
             this.btConsulta.UseVisualStyleBackColor = false;
@@ -187,9 +201,10 @@
             // 
             this.btañadirproducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btañadirproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btañadirproducto.Location = new System.Drawing.Point(64, 670);
+            this.btañadirproducto.Location = new System.Drawing.Point(85, 825);
+            this.btañadirproducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btañadirproducto.Name = "btañadirproducto";
-            this.btañadirproducto.Size = new System.Drawing.Size(99, 46);
+            this.btañadirproducto.Size = new System.Drawing.Size(132, 57);
             this.btañadirproducto.TabIndex = 13;
             this.btañadirproducto.Text = "Añadir producto";
             this.btañadirproducto.UseVisualStyleBackColor = false;
@@ -199,9 +214,10 @@
             // 
             this.btCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancelar.Location = new System.Drawing.Point(631, 144);
+            this.btCancelar.Location = new System.Drawing.Point(841, 177);
+            this.btCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(99, 23);
+            this.btCancelar.Size = new System.Drawing.Size(132, 28);
             this.btCancelar.TabIndex = 14;
             this.btCancelar.Text = "Borrar Datos";
             this.btCancelar.UseVisualStyleBackColor = false;
@@ -211,9 +227,10 @@
             // 
             this.btSalir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSalir.Location = new System.Drawing.Point(810, 670);
+            this.btSalir.Location = new System.Drawing.Point(1080, 825);
+            this.btSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(99, 46);
+            this.btSalir.Size = new System.Drawing.Size(132, 57);
             this.btSalir.TabIndex = 15;
             this.btSalir.Text = "Salir";
             this.btSalir.UseVisualStyleBackColor = false;
@@ -224,9 +241,10 @@
             this.bteliminarproducto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bteliminarproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bteliminarproducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bteliminarproducto.Location = new System.Drawing.Point(309, 670);
+            this.bteliminarproducto.Location = new System.Drawing.Point(412, 825);
+            this.bteliminarproducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bteliminarproducto.Name = "bteliminarproducto";
-            this.bteliminarproducto.Size = new System.Drawing.Size(99, 46);
+            this.bteliminarproducto.Size = new System.Drawing.Size(132, 57);
             this.bteliminarproducto.TabIndex = 16;
             this.bteliminarproducto.Text = "Eliminar Producto";
             this.bteliminarproducto.UseVisualStyleBackColor = false;
@@ -235,9 +253,10 @@
             // cbCategorias
             // 
             this.cbCategorias.FormattingEnabled = true;
-            this.cbCategorias.Location = new System.Drawing.Point(217, 210);
+            this.cbCategorias.Location = new System.Drawing.Point(289, 258);
+            this.cbCategorias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCategorias.Name = "cbCategorias";
-            this.cbCategorias.Size = new System.Drawing.Size(121, 21);
+            this.cbCategorias.Size = new System.Drawing.Size(160, 24);
             this.cbCategorias.TabIndex = 17;
             this.cbCategorias.SelectedIndexChanged += new System.EventHandler(this.cbCategorias_SelectedIndexChanged);
             // 
@@ -247,9 +266,10 @@
             this.lbtitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbtitulo.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbtitulo.Location = new System.Drawing.Point(59, 21);
+            this.lbtitulo.Location = new System.Drawing.Point(79, 26);
+            this.lbtitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbtitulo.Name = "lbtitulo";
-            this.lbtitulo.Size = new System.Drawing.Size(223, 35);
+            this.lbtitulo.Size = new System.Drawing.Size(279, 43);
             this.lbtitulo.TabIndex = 18;
             this.lbtitulo.Text = "Gestión productos";
             // 
@@ -259,9 +279,10 @@
             this.lbsubtitulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbsubtitulo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbsubtitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbsubtitulo.Location = new System.Drawing.Point(59, 83);
+            this.lbsubtitulo.Location = new System.Drawing.Point(79, 102);
+            this.lbsubtitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbsubtitulo.Name = "lbsubtitulo";
-            this.lbsubtitulo.Size = new System.Drawing.Size(445, 28);
+            this.lbsubtitulo.Size = new System.Drawing.Size(571, 35);
             this.lbsubtitulo.TabIndex = 19;
             this.lbsubtitulo.Text = "Introduzca el ID del producto y pulse CONSULTAR:";
             // 
@@ -269,9 +290,10 @@
             // 
             this.btModificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btModificar.Location = new System.Drawing.Point(557, 670);
+            this.btModificar.Location = new System.Drawing.Point(743, 825);
+            this.btModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btModificar.Name = "btModificar";
-            this.btModificar.Size = new System.Drawing.Size(99, 46);
+            this.btModificar.Size = new System.Drawing.Size(132, 57);
             this.btModificar.TabIndex = 20;
             this.btModificar.Text = "Modificar Datos";
             this.btModificar.UseVisualStyleBackColor = false;
@@ -282,9 +304,10 @@
             this.lbmensajemodificar.AutoSize = true;
             this.lbmensajemodificar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbmensajemodificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbmensajemodificar.Location = new System.Drawing.Point(22, 322);
+            this.lbmensajemodificar.Location = new System.Drawing.Point(29, 396);
+            this.lbmensajemodificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbmensajemodificar.Name = "lbmensajemodificar";
-            this.lbmensajemodificar.Size = new System.Drawing.Size(597, 21);
+            this.lbmensajemodificar.Size = new System.Drawing.Size(730, 26);
             this.lbmensajemodificar.TabIndex = 22;
             this.lbmensajemodificar.Text = "Si fuera necesario puede modificar el  precio del producto y pulsar MODIFICAR DAT" +
     "OS";
@@ -305,9 +328,10 @@
             this.panel1.Controls.Add(this.textBoxcantidad);
             this.panel1.Controls.Add(this.textBoxprecioxunidad);
             this.panel1.Controls.Add(this.lbunitPrice);
-            this.panel1.Location = new System.Drawing.Point(59, 185);
+            this.panel1.Location = new System.Drawing.Point(79, 228);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 434);
+            this.panel1.Size = new System.Drawing.Size(895, 534);
             this.panel1.TabIndex = 23;
             this.panel1.Visible = false;
             // 
@@ -316,19 +340,20 @@
             this.lbinstruccion.AutoSize = true;
             this.lbinstruccion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbinstruccion.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbinstruccion.Location = new System.Drawing.Point(22, 30);
+            this.lbinstruccion.Location = new System.Drawing.Point(29, 37);
+            this.lbinstruccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbinstruccion.Name = "lbinstruccion";
-            this.lbinstruccion.Size = new System.Drawing.Size(631, 28);
+            this.lbinstruccion.Size = new System.Drawing.Size(813, 35);
             this.lbinstruccion.TabIndex = 0;
             this.lbinstruccion.Text = "Siga las instrucciones para añadir producto y pulse AÑADIR PRODUCTO:";
             this.lbinstruccion.Visible = false;
             // 
             // ProductoView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(973, 750);
+            this.ClientSize = new System.Drawing.Size(1297, 923);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbsubtitulo);
             this.Controls.Add(this.lbtitulo);
@@ -341,6 +366,7 @@
             this.Controls.Add(this.lbProductID);
             this.Controls.Add(this.btañadirproducto);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProductoView";
             this.Text = "Products";
             this.Load += new System.EventHandler(this.Products_Load);

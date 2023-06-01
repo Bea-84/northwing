@@ -290,14 +290,70 @@ namespace northwing
             //te metes en diseño en el text box que necesites, pulsas rayo(eventos) y seleccionas KEY PRESS
             //pulsas dos veces al text box y en el código ponemos lo siguiente
             //de esta manera el usuario no podrá introducir un valor no valido
-            //e.Handled = !char.IsDigit(e.KeyChar); 
+            //e.Handled = !char.IsDigit(e.KeyChar);
             
             //if (!char.IsDigit(e.KeyChar))
             //{
             //    textBoxproductID.Text = "";
             //}
+
+            if(e.KeyChar==Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    decimal id = decimal.Parse(this.textBoxproductID.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Dato introducido incorrecto,por favor introduzca un valor numérico");
+                    borrarDatos();
+                    return;
+                }
+
+                ds = productoController.consultaTablaProductos(this.textBoxproductID.Text);
+
+                if (ds.Products.Rows.Count == 0)
+                {
+                    MessageBox.Show("El producto no existe,si desea añadir un producto rellene los datos y pulse el botón AÑADIR PRODUCTO");
+                    borrarDatos();
+                    this.textBoxproductID.Enabled = false; //método para impedir acceso a usuario
+                    this.btañadirproducto.Visible = true;
+                    this.panel1.Visible = true;
+                    this.lbinstruccion.Visible = true;
+                    this.lbsubtitulo.Visible = true;
+                    this.lbmensajemodificar.Visible = false;
+
+                    this.textBoxproductName.Enabled = true;
+                    this.textBoxsupplierID.Enabled = true;
+                    this.cbCategorias.Enabled = true;
+                    this.textBoxcantidad.Enabled = true;
+                }
+                else
+                {
+                    this.textBoxproductName.Text = ds.Products[0].ProductName;
+                    this.textBoxsupplierID.Text = ds.Products[0].SupplierID.ToString();
+                    this.textBoxcategoryID.Text = ds.Products[0].CategoryID.ToString();
+                    this.textBoxcantidad.Text = ds.Products[0].QuantityPerUnit.ToString();
+                    this.textBoxprecioxunidad.Text = ds.Products[0].UnitPrice.ToString();
+
+                    this.bteliminarproducto.Visible = true;
+                    this.btModificar.Visible = true;
+                    this.btCancelar.Visible = true;
+                    this.panel1.Visible = true;
+                    this.lbinstruccion.Visible = false;
+                    this.lbsubtitulo.Visible = true;
+                    this.lbmensajemodificar.Visible = true;
+
+                    this.textBoxproductName.Enabled = false;
+                    this.textBoxsupplierID.Enabled = false;
+                    this.cbCategorias.Enabled = false;
+                    this.textBoxcantidad.Enabled = false;
+
+                    MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS");
+                }
+            }
             
-        }
+        } 
 
         private void textBoxproductID_TextChanged(object sender, EventArgs e)
         {
@@ -322,6 +378,37 @@ namespace northwing
             //    textBoxproductID.Text = auxCambiar;
             //}
 
-        } 
+        }
+
+        private void textBoxprecioxunidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    int nRows;
+                    if (!this.textBoxproductName.Text.Equals(""))
+                    {
+                        nRows = productoController.altaProducto(this.textBoxproductName.Text, this.textBoxsupplierID.Text, this.textBoxcategoryID.Text, this.textBoxcantidad.Text, this.textBoxprecioxunidad.Text);
+
+                        if (nRows > 0)
+                        {
+                            MessageBox.Show("Producto añadido con éxito");
+                            borrarDatos();
+                            this.btañadirproducto.Visible = false;
+                            this.btModificar.Visible = false;
+                            this.bteliminarproducto.Visible = false;
+                            this.btCancelar.Visible = false;
+
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } 
+        }
     }  
 }

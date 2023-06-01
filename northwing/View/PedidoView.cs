@@ -304,5 +304,110 @@ namespace northwing.View
             this.textBoxCP.Text = "";
             this.textBoxcountry.Text = "";
         }
+
+        private void textBoxorderID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    decimal id = decimal.Parse(this.textBoxorderID.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Dato introducido incorrecto,por favor introduzca un valor numérico");
+                    borrarDatos();
+                    return;
+                }
+
+                ds = pedidoController.consultaTablaPedidos(this.textBoxorderID.Text);
+
+                if (ds.Orders.Rows.Count == 0)
+                {
+                    MessageBox.Show("El pedido no existe, si lo desea rellene los datos a continuación y pulse el botón CREAR PEDIDO");
+                    borrarDatos();
+                    this.textBoxorderID.Enabled = false; //método para impedir acceso a usuario
+                    this.btAlta.Visible = true;
+                    this.panel1.Visible = true;
+                    this.lbinstruccion.Visible = true;
+                    this.lbsubtitulo.Visible = true;
+                    this.lbmensajemodificar.Visible = false;
+
+                    this.textBoxcustomerID.Enabled = true;
+                    this.cbEmployeID.Enabled = true;
+                    this.dateTimecalendario.Enabled = true;
+                    this.textBoxdireccion.Enabled = true;
+                    this.textBoxCP.Enabled = true;
+
+                }
+                else
+                {
+                    this.textBoxcustomerID.Text = ds.Orders[0].CustomerID;
+                    this.textBoxemployeID.Text = ds.Orders[0].EmployeeID.ToString();
+                    this.dateTimecalendario.Text = ds.Orders[0].OrderDate.ToString();
+                    this.textBoxdireccion.Text = ds.Orders[0].ShipAddress;
+                    this.textBoxCP.Text = ds.Orders[0].ShipPostalCode;
+                    //si el dato que queremos grabar en la BBDD es null asi le diremos al programa 
+                    //que añada dato igualmente 
+                    if (!ds.Orders[0].IsShipCountryNull())
+                    {
+                        this.textBoxcountry.Text = "" + ds.Orders[0].ShipCountry;
+                    }
+
+                    this.bteliminarpedido.Visible = true;
+                    this.btmodificar.Visible = true;
+                    this.btCancelar.Visible = true;
+                    this.lbmensajemodificar.Visible = true;
+                    this.panel1.Visible = true;
+                    this.lbinstruccion.Visible = false;
+                    this.lbsubtitulo.Visible = true;
+
+                    this.textBoxcustomerID.Enabled = false;
+                    this.cbEmployeID.Enabled = false;
+                    this.dateTimecalendario.Enabled = false;
+                    this.textBoxdireccion.Enabled = false;
+                    this.textBoxCP.Enabled = false;
+                    MessageBox.Show("Si desea realizar otra consulta pulse BORRAR DATOS");
+                } 
+            }
+        }
+
+        private void textBoxcountry_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+
+                ds = pedidoController.buscarCustomer(this.textBoxcustomerID.Text);
+
+                try
+                {
+                    int nRows;
+
+                    if (ds.Customers.Rows.Count > 0)
+                    {
+                        nRows = pedidoController.altaPedido(this.textBoxcustomerID.Text, this.textBoxemployeID.Text, this.dateTimecalendario.Text, this.textBoxdireccion.Text, this.textBoxCP.Text, this.textBoxcountry.Text);
+
+                        if (nRows > 0)
+                        {
+                            MessageBox.Show("Pedido realizado con éxito");
+                            borrarDatos();
+                            this.btAlta.Visible = false;
+                            this.btmodificar.Visible = false;
+                            this.bteliminarpedido.Visible = false;
+                            this.btCancelar.Visible = false;
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("El cliente no existe,debe darse de alta para poder hacer pedido");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } 
+        }
     }  
 }
